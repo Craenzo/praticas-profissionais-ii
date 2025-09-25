@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7qqyom7425u1"
-path="res://.godot/imported/Catarina_Costa.png-7f67269e9c951e21ec87768b9c20cb77.ctex"
+uid="uid://bql1cw4h5uh0m"
+path="res://.godot/imported/Catarina_Frente4.png-752408b43f6beb9c5b71e3e3f8c9c088.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Catarina_Costa.png"
-dest_files=["res://.godot/imported/Catarina_Costa.png-7f67269e9c951e21ec87768b9c20cb77.ctex"]
+source_file="res://Assets/FrontAnimation/Catarina_Frente4.png"
+dest_files=["res://.godot/imported/Catarina_Frente4.png-752408b43f6beb9c5b71e3e3f8c9c088.ctex"]
 
 [params]
 

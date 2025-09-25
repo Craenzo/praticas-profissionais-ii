@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fyc1316yanqw"
-path="res://.godot/imported/Catarina_Esquerda.png-3d818e79fec28ff6c81ca36c9c0e05b3.ctex"
+uid="uid://xlwl2oan7x1p"
+path="res://.godot/imported/Catarina_Frente2 .png-58e73b092f780be918836839f0157803.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Catarina_Esquerda.png"
-dest_files=["res://.godot/imported/Catarina_Esquerda.png-3d818e79fec28ff6c81ca36c9c0e05b3.ctex"]
+source_file="res://Assets/FrontAnimation/Catarina_Frente2 .png"
+dest_files=["res://.godot/imported/Catarina_Frente2 .png-58e73b092f780be918836839f0157803.ctex"]
 
 [params]
 
