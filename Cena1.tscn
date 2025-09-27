@@ -1,3 +1,123 @@
-[gd_scene format=3 uid="uid://cyftg0sfy8e0m"]
+[gd_scene load_steps=5 format=3 uid="uid://cyftg0sfy8e0m"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Script" path="res://cena_1.gd" id="1_h5gq4"]
+[ext_resource type="Texture2D" path="res://freepik__retro-game-wallpaper-pixelated-scene-of-a-vast-gra__86894.png" id="1_u4fbm"]
+[ext_resource type="FontFile" path="res://Pixellari.ttf" id="2_vi0ms"]
+[ext_resource type="FontFile" path="res://SGT-Jhon-O.ttf" id="3_byxcs"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -14.0
+offset_right = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h5gq4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_u4fbm")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -608.0
+offset_top = -40.0
+offset_right = -226.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer" groups=["button"]]
+layout_mode = 2
+text = "@Todos os direitos reservados aos"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_trim_flags = 128
+
+[node name="Thegaymers" type="LinkButton" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+localize_numeral_system = false
+theme_override_colors/font_color = Color(0.06666667, 0, 0.67058825, 1)
+text = " The Gaymers"
+uri = "\"https://www.youtube.com/@corinthians"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(700, 710)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 45.0
+offset_top = 67.0
+offset_right = 745.0
+offset_bottom = 67.0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(20, 300)
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_fonts/font = ExtResource("3_byxcs")
+theme_override_font_sizes/font_size = 100
+text = "Subject 217"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(500, 300)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 406.0
+offset_right = 718.0
+offset_bottom = 706.0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+size_flags_stretch_ratio = 3.89
+
+[node name="Jogar" type="Button" parent="HBoxContainer2/VBoxContainer" groups=["button"]]
+modulate = Color(0.69411767, 1, 0.49019608, 1)
+custom_minimum_size = Vector2(100, 80)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vi0ms")
+theme_override_font_sizes/font_size = 40
+text = "Novo Jogo"
+
+[node name="Saves" type="Button" parent="HBoxContainer2/VBoxContainer" groups=["button"]]
+custom_minimum_size = Vector2(0, 65)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vi0ms")
+theme_override_font_sizes/font_size = 30
+text = "Carregar jogo"
+
+[node name="Config" type="Button" parent="HBoxContainer2/VBoxContainer" groups=["button"]]
+custom_minimum_size = Vector2(0, 65)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vi0ms")
+theme_override_font_sizes/font_size = 30
+text = "Configurações"
+
+[node name="quit" type="Button" parent="HBoxContainer2/VBoxContainer" groups=["button"]]
+modulate = Color(1, 0.24313726, 0, 1)
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vi0ms")
+theme_override_font_sizes/font_size = 28
+text = "Sair"
