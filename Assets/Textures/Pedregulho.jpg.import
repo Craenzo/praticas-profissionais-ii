@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7qqyom7425u1"
-path="res://.godot/imported/Catarina_Costa.png-e27f489b4c9282ac311561dba778c07b.ctex"
+uid="uid://b84gjvmirtbbn"
+path="res://.godot/imported/Pedregulho.jpg-ca16ef2582684c407d54b6182827acab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/MainAnimation/BackAnimation/Catarina_Costa.png"
-dest_files=["res://.godot/imported/Catarina_Costa.png-e27f489b4c9282ac311561dba778c07b.ctex"]
+source_file="res://Assets/Textures/Pedregulho.jpg"
+dest_files=["res://.godot/imported/Pedregulho.jpg-ca16ef2582684c407d54b6182827acab.ctex"]
 
 [params]
 
@@ -32,7 +32,7 @@ process/channel_remap/green=1
 process/channel_remap/blue=2
 process/channel_remap/alpha=3
 process/fix_alpha_border=true
-process/premult_alpha=false
+process/premult_alpha=true
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false

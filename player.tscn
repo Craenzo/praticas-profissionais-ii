@@ -1,17 +1,19 @@
-[gd_scene load_steps=14 format=3 uid="uid://bkiubqfnfk62c"]
+[gd_scene load_steps=19 format=3 uid="uid://bkiubqfnfk62c"]
 
+[ext_resource type="Texture2D" uid="uid://b84gjvmirtbbn" path="res://Assets/Textures/Pedregulho.jpg" id="1_n7ghd"]
 [ext_resource type="Script" uid="uid://dmhmwpammr1ka" path="res://character_body_2d.gd" id="2_hqtel"]
-[ext_resource type="Texture2D" uid="uid://chnkouymfg60u" path="res://icon.svg" id="2_i3pqv"]
-[ext_resource type="Texture2D" uid="uid://c7qqyom7425u1" path="res://Assets/MainAnimation/BackAnimation/Catarina_Costa.png" id="3_n7ghd"]
+[ext_resource type="Texture2D" uid="uid://bco2lvvty4ivc" path="res://Assets/MainAnimation/BackAnimation/Catarina_Costa1.png" id="3_ivps1"]
 [ext_resource type="Texture2D" uid="uid://csk3u6ibcww4s" path="res://Assets/MainAnimation/FrontAnimation/Catarina_Frente1.png" id="3_sweqy"]
 [ext_resource type="Texture2D" uid="uid://xlwl2oan7x1p" path="res://Assets/MainAnimation/FrontAnimation/Catarina_Frente2 .png" id="4_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://d4h3av4yeqs2p" path="res://Assets/MainAnimation/RightAnimation/Catarina_Direita.png" id="4_nvl01"]
+[ext_resource type="Texture2D" uid="uid://dsqkav27or6ey" path="res://Assets/MainAnimation/BackAnimation/Catarina_Costa2.png" id="4_urp6f"]
 [ext_resource type="Texture2D" uid="uid://cth0c5p6atsdw" path="res://Assets/MainAnimation/FrontAnimation/Catarina_Frente3.png" id="5_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://b0b73d33xdb0s" path="res://Assets/MainAnimation/BackAnimation/Catarina_Costa3.png" id="5_bwjto"]
 [ext_resource type="Texture2D" uid="uid://fyc1316yanqw" path="res://Assets/MainAnimation/LeftAnimation/Catarina_Esquerda.png" id="5_ivps1"]
 [ext_resource type="Texture2D" uid="uid://bql1cw4h5uh0m" path="res://Assets/MainAnimation/FrontAnimation/Catarina_Frente4.png" id="6_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://dc0htfjjcfkhp" path="res://Assets/MainAnimation/BackAnimation/Catarina_Costa4.png" id="6_bwjto"]
+[ext_resource type="Texture2D" uid="uid://b6i7p0avlm1le" path="res://Assets/MainAnimation/BackAnimation/Catarina_Costa5.png" id="7_606se"]
 [ext_resource type="Texture2D" uid="uid://cwwap4nukyper" path="res://Assets/MainAnimation/FrontAnimation/Catarina_Frente5.png" id="7_dw050"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_i3pqv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
 size = Vector2(34, 58)
@@ -20,11 +22,32 @@ size = Vector2(34, 58)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_n7ghd")
+"texture": ExtResource("3_ivps1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_urp6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bwjto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_urp6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ivps1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bwjto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_606se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bwjto")
 }],
 "loop": true,
 "name": &"costas",
-"speed": 5.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -32,7 +55,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"direita",
-"speed": 5.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -69,25 +92,34 @@ animations = [{
 }],
 "loop": true,
 "name": &"frente",
-"speed": 12.0
+"speed": 16.0
 }]
+
+[sub_resource type="Gradient" id="Gradient_n7ghd"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nvl01"]
+gradient = SubResource("Gradient_n7ghd")
+width = 1024
+height = 1024
+fill = 1
+fill_from = Vector2(0.491453, 0.491453)
 
 [node name="Cena" type="Node2D"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-disable_mode = 1
-physics_material_override = SubResource("PhysicsMaterial_i3pqv")
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(1.0000305, 34.999992)
-scale = Vector2(30.320309, 25.039057)
-texture = ExtResource("2_i3pqv")
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -1849.0
+offset_top = -1697.0
+offset_right = 1931.0
+offset_bottom = 1401.0
+texture = ExtResource("1_n7ghd")
+stretch_mode = 1
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("2_hqtel")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-zoom = Vector2(2.5, 2.5)
+zoom = Vector2(2, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(0, 1)
@@ -95,4 +127,11 @@ shape = SubResource("RectangleShape2D_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_dw050")
-animation = &"frente"
+animation = &"costas"
+
+[node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D"]
+texture = SubResource("GradientTexture2D_nvl01")
+texture_scale = 0.7
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0, 0, 0, 1)
