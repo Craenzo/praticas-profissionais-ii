@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bkiubqfnfk62c"]
+[gd_scene load_steps=27 format=3 uid="uid://bkiubqfnfk62c"]
 
 [ext_resource type="Texture2D" uid="uid://b84gjvmirtbbn" path="res://Assets/Textures/Pedregulho.jpg" id="1_n7ghd"]
 [ext_resource type="Script" uid="uid://dmhmwpammr1ka" path="res://character_body_2d.gd" id="2_hqtel"]
@@ -9,13 +9,17 @@
 [ext_resource type="Texture2D" uid="uid://dsqkav27or6ey" path="res://Assets/MainAnimation/BackAnimation/Catarina_Costa2.png" id="4_urp6f"]
 [ext_resource type="Texture2D" uid="uid://cth0c5p6atsdw" path="res://Assets/MainAnimation/FrontAnimation/Catarina_Frente3.png" id="5_1jxqw"]
 [ext_resource type="Texture2D" uid="uid://b0b73d33xdb0s" path="res://Assets/MainAnimation/BackAnimation/Catarina_Costa3.png" id="5_bwjto"]
-[ext_resource type="Texture2D" uid="uid://fyc1316yanqw" path="res://Assets/MainAnimation/LeftAnimation/Catarina_Esquerda.png" id="5_ivps1"]
 [ext_resource type="Texture2D" uid="uid://bql1cw4h5uh0m" path="res://Assets/MainAnimation/FrontAnimation/Catarina_Frente4.png" id="6_1jxqw"]
 [ext_resource type="Texture2D" uid="uid://dc0htfjjcfkhp" path="res://Assets/MainAnimation/BackAnimation/Catarina_Costa4.png" id="6_bwjto"]
 [ext_resource type="Texture2D" uid="uid://b6i7p0avlm1le" path="res://Assets/MainAnimation/BackAnimation/Catarina_Costa5.png" id="7_606se"]
 [ext_resource type="Texture2D" uid="uid://cwwap4nukyper" path="res://Assets/MainAnimation/FrontAnimation/Catarina_Frente5.png" id="7_dw050"]
+[ext_resource type="Texture2D" uid="uid://cj6p4x5v7lfmd" path="res://Assets/MainAnimation/LeftAnimation/Catarina_Esquerda1.png" id="13_pbfsw"]
+[ext_resource type="Texture2D" uid="uid://bjjxc2ny46400" path="res://Assets/MainAnimation/LeftAnimation/Catarina_Esquerda2.png" id="14_5tmop"]
+[ext_resource type="Texture2D" uid="uid://ckee41fmfx1k4" path="res://Assets/MainAnimation/LeftAnimation/Catarina_Esquerda3.png" id="15_7ahtn"]
 [ext_resource type="Texture2D" uid="uid://xlmu5r5jvxoi" path="res://Assets/MainAnimation/StandingAnimation/Catarina_Parada1.png" id="15_q13i1"]
+[ext_resource type="Texture2D" uid="uid://de142oudwifng" path="res://Assets/MainAnimation/LeftAnimation/Catarina_Esquerda4.png" id="16_7ahtn"]
 [ext_resource type="Texture2D" uid="uid://devynhb4j2wj" path="res://Assets/MainAnimation/StandingAnimation/Catarina_Parada2.png" id="16_pylmc"]
+[ext_resource type="Texture2D" uid="uid://6h0lktsihd2t" path="res://Assets/MainAnimation/LeftAnimation/Catarina_Esquerda5.png" id="17_7lmhl"]
 [ext_resource type="Texture2D" uid="uid://u6ec8i2levwe" path="res://Assets/MainAnimation/StandingAnimation/Catarina_Parada3.png" id="17_pbfsw"]
 [ext_resource type="Texture2D" uid="uid://cq1y0a20gs8hh" path="res://Assets/MainAnimation/StandingAnimation/Catarina_Parada4.png" id="18_5tmop"]
 
@@ -84,11 +88,32 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_ivps1")
+"texture": ExtResource("13_pbfsw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5tmop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_7ahtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5tmop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pbfsw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7ahtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_7lmhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7ahtn")
 }],
 "loop": true,
 "name": &"left",
-"speed": 5.0
+"speed": 16.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -137,10 +162,10 @@ metadata/_snap_count = 16
 [node name="Cena" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -1849.0
-offset_top = -1697.0
-offset_right = 1931.0
-offset_bottom = 1401.0
+offset_left = -12917.0
+offset_top = -10811.0
+offset_right = 13799.0
+offset_bottom = 11143.0
 texture = ExtResource("1_n7ghd")
 stretch_mode = 1
 
@@ -156,7 +181,7 @@ shape = SubResource("RectangleShape2D_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_dw050")
-animation = &"standing"
+animation = &"left"
 
 [node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D"]
 position = Vector2(-1.4999695, 4.5000076)
