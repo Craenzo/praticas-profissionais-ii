@@ -6,9 +6,14 @@ extends CharacterBody2D
 var base_y = 0.0
 var walk_cycle = 0.0
 
+var blink_timer = 0.0
+var blink_interval = 4.0 
+
+var current_dir = "front"  
+
 func _ready():
 	base_y = anim.position.y
-	anim.play("frente")
+	anim.play("front")
 	anim.speed_scale = 1.0  
 
 func _physics_process(delta):
@@ -22,26 +27,38 @@ func _physics_process(delta):
 	velocity = input_vector * speed
 	move_and_slide()
 	
-	
 	if input_vector.y > 0:  
-		anim.play("frente") 
+		anim.play("front") 
 		walk_cycle += delta * 18.0
 		anim.position.y = base_y + sin(walk_cycle) * 1.5 
+		current_dir = "front"
 	elif input_vector.y < 0:  
-		anim.play("costas")
+		anim.play("back")
+		walk_cycle += delta * 18.0
 		anim.position.y = base_y + sin(walk_cycle) * 1.5 
-		walk_cycle += delta * 18.0
+		current_dir = "back"
 	elif input_vector.x > 0:  
-		anim.play("direita")
-		anim.position.y = base_y + sin(walk_cycle) * 1.5
+		anim.play("right")
 		walk_cycle += delta * 18.0
+		anim.position.y = base_y + sin(walk_cycle) * 1.5
+		current_dir = "right"
 	elif input_vector.x < 0:  
-		anim.play("esquerda")
-		anim.position.y = base_y + sin(walk_cycle) * 1.5
+		anim.play("left")
 		walk_cycle += delta * 18.0
+		anim.position.y = base_y + sin(walk_cycle) * 1.5
+		current_dir = "left"
 	else:
-		# parado
-		anim.stop()
-		anim.frame = 0
-		anim.position.y = base_y
-		walk_cycle = 0.0
+		# parado -> piscar apenas se estiver olhando para frente
+		blink_timer += delta
+		if current_dir == "front" and blink_timer >= blink_interval:
+			anim.play("standing")  # só pisca se estiver de frente
+			if anim.frame == anim.sprite_frames.get_frame_count("standing") - 1:
+				anim.stop()
+				anim.frame = 0
+				blink_timer = 0.0
+		else:
+			# mantém parada no frame 0 da direção atual
+			anim.stop()
+			anim.frame = 0
+			anim.position.y = base_y
+			walk_cycle = 0.0
