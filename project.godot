@@ -13,7 +13,6 @@ config_version=5
 config/name="PraticasProfissionaisII"
 run/main_scene="uid://bkiubqfnfk62c"
 config/features=PackedStringArray("4.5", "Mobile")
-config/icon="res://icon.svg"
 
 [display]
 
