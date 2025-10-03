@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cyftg0sfy8e0m"]
 
-[ext_resource type="Script" path="res://cena_1.gd" id="1_h5gq4"]
-[ext_resource type="Texture2D" path="res://freepik__retro-game-wallpaper-pixelated-scene-of-a-vast-gra__86894.png" id="1_u4fbm"]
-[ext_resource type="FontFile" path="res://Pixellari.ttf" id="2_vi0ms"]
-[ext_resource type="FontFile" path="res://SGT-Jhon-O.ttf" id="3_byxcs"]
+[ext_resource type="Script" uid="uid://c0v4lhnu58x56" path="res://cena_1.gd" id="1_h5gq4"]
+[ext_resource type="Texture2D" uid="uid://bm1k4iqx0mpae" path="res://addons/freepik__retro-game-wallpaper-pixelated-scene-of-a-vast-gra__86894.png" id="2_h5gq4"]
+[ext_resource type="FontFile" uid="uid://b2bhk1rrqidd4" path="res://Pixellari.ttf" id="2_vi0ms"]
+[ext_resource type="FontFile" uid="uid://2nu2t4ellsmc" path="res://SGT-Jhon-O.ttf" id="3_byxcs"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -23,7 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_u4fbm")
+texture = ExtResource("2_h5gq4")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
