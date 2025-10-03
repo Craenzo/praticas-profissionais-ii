@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bkiubqfnfk62c"]
+[gd_scene load_steps=31 format=3 uid="uid://bkiubqfnfk62c"]
 
 [ext_resource type="Texture2D" uid="uid://b84gjvmirtbbn" path="res://Assets/Textures/Pedregulho.jpg" id="1_alogn"]
 [ext_resource type="Script" uid="uid://dmhmwpammr1ka" path="res://Script/character_body_2d.gd" id="2_4j5ex"]
@@ -17,11 +17,15 @@
 [ext_resource type="Texture2D" uid="uid://ckee41fmfx1k4" path="res://Assets/MainAnimation/LeftAnimation/Catarina_Esquerda3.png" id="15_ylkck"]
 [ext_resource type="Texture2D" uid="uid://de142oudwifng" path="res://Assets/MainAnimation/LeftAnimation/Catarina_Esquerda4.png" id="16_phtmq"]
 [ext_resource type="Texture2D" uid="uid://6h0lktsihd2t" path="res://Assets/MainAnimation/LeftAnimation/Catarina_Esquerda5.png" id="17_8vy8t"]
-[ext_resource type="Texture2D" uid="uid://d4h3av4yeqs2p" path="res://Assets/MainAnimation/RightAnimation/Catarina_Direita.png" id="18_gdv6k"]
+[ext_resource type="Texture2D" uid="uid://c0i0exsg1ewi6" path="res://Assets/MainAnimation/RightAnimation/Catarina_Direita1.png" id="18_8v2xp"]
 [ext_resource type="Texture2D" uid="uid://xlmu5r5jvxoi" path="res://Assets/MainAnimation/StandingAnimation/Catarina_Parada1.png" id="19_0jd21"]
+[ext_resource type="Texture2D" uid="uid://du6bvpdeuh6ol" path="res://Assets/MainAnimation/RightAnimation/Catarina_Direita2.png" id="19_t7cd8"]
 [ext_resource type="Texture2D" uid="uid://devynhb4j2wj" path="res://Assets/MainAnimation/StandingAnimation/Catarina_Parada2.png" id="20_pxip4"]
+[ext_resource type="Texture2D" uid="uid://cxhcy38ylqxr1" path="res://Assets/MainAnimation/RightAnimation/Catarina_Direita3.png" id="20_sjhg2"]
 [ext_resource type="Texture2D" uid="uid://u6ec8i2levwe" path="res://Assets/MainAnimation/StandingAnimation/Catarina_Parada3.png" id="21_hgucs"]
+[ext_resource type="Texture2D" uid="uid://ci4810o6tvnqy" path="res://Assets/MainAnimation/RightAnimation/Catarina_Direita4.png" id="21_jnm6q"]
 [ext_resource type="Texture2D" uid="uid://cq1y0a20gs8hh" path="res://Assets/MainAnimation/StandingAnimation/Catarina_Parada4.png" id="22_157go"]
+[ext_resource type="Texture2D" uid="uid://psfq4cwvtqlg" path="res://Assets/MainAnimation/RightAnimation/Catarina_Direita5.png" id="22_ka0he"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
 size = Vector2(34, 58)
@@ -117,7 +121,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("18_gdv6k")
+"texture": ExtResource("18_8v2xp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_t7cd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_sjhg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_t7cd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_8v2xp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_jnm6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ka0he")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_jnm6q")
 }],
 "loop": true,
 "name": &"right",
@@ -173,7 +198,7 @@ stretch_mode = 1
 script = ExtResource("2_4j5ex")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-zoom = Vector2(2, 2)
+zoom = Vector2(4, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(0, 1)
@@ -181,7 +206,7 @@ shape = SubResource("RectangleShape2D_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_dw050")
-animation = &"left"
+animation = &"right"
 
 [node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D"]
 position = Vector2(-1.4999695, 4.5000076)
