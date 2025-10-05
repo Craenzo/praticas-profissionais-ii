@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PraticasProfissionaisII"
-run/main_scene="uid://bkiubqfnfk62c"
+run/main_scene="uid://cyftg0sfy8e0m"
 config/features=PackedStringArray("4.5", "Mobile")
 
 [display]

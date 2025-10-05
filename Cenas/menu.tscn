@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cyftg0sfy8e0m"]
 
-[ext_resource type="Script" uid="uid://c0v4lhnu58x56" path="res://cena_1.gd" id="1_h5gq4"]
-[ext_resource type="Texture2D" uid="uid://bm1k4iqx0mpae" path="res://addons/freepik__retro-game-wallpaper-pixelated-scene-of-a-vast-gra__86894.png" id="2_h5gq4"]
-[ext_resource type="FontFile" uid="uid://b2bhk1rrqidd4" path="res://Pixellari.ttf" id="2_vi0ms"]
-[ext_resource type="FontFile" uid="uid://2nu2t4ellsmc" path="res://SGT-Jhon-O.ttf" id="3_byxcs"]
+[ext_resource type="Script" uid="uid://q62fha0uqo4t" path="res://Script/menu.gd" id="1_pveh2"]
+[ext_resource type="Texture2D" uid="uid://b4m1f428ewdw2" path="res://Assets/Textures/freepik__retro-game-wallpaper-pixelated-scene-of-a-vast-gra__86894.png" id="2_eheat"]
+[ext_resource type="FontFile" uid="uid://cbiuxpvn1wrbb" path="res://Assets/Fontes/SGT-Jhon-O.ttf" id="3_fapvr"]
+[ext_resource type="FontFile" uid="uid://d352knxmg0psm" path="res://Assets/Fontes/Pixellari.ttf" id="4_kdsmm"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -14,16 +14,20 @@ offset_left = -14.0
 offset_right = -14.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_h5gq4")
+script = ExtResource("1_pveh2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -122.0
+offset_right = 25.0
+offset_bottom = 134.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_h5gq4")
+texture = ExtResource("2_eheat")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -71,7 +75,7 @@ grow_vertical = 2
 custom_minimum_size = Vector2(20, 300)
 layout_mode = 2
 size_flags_vertical = 2
-theme_override_fonts/font = ExtResource("3_byxcs")
+theme_override_fonts/font = ExtResource("3_fapvr")
 theme_override_font_sizes/font_size = 100
 text = "Subject 217"
 horizontal_alignment = 1
@@ -96,21 +100,21 @@ size_flags_stretch_ratio = 3.89
 modulate = Color(0.69411767, 1, 0.49019608, 1)
 custom_minimum_size = Vector2(100, 80)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_vi0ms")
+theme_override_fonts/font = ExtResource("4_kdsmm")
 theme_override_font_sizes/font_size = 40
 text = "Novo Jogo"
 
 [node name="Saves" type="Button" parent="HBoxContainer2/VBoxContainer" groups=["button"]]
 custom_minimum_size = Vector2(0, 65)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_vi0ms")
+theme_override_fonts/font = ExtResource("4_kdsmm")
 theme_override_font_sizes/font_size = 30
 text = "Carregar jogo"
 
 [node name="Config" type="Button" parent="HBoxContainer2/VBoxContainer" groups=["button"]]
 custom_minimum_size = Vector2(0, 65)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_vi0ms")
+theme_override_fonts/font = ExtResource("4_kdsmm")
 theme_override_font_sizes/font_size = 30
 text = "Configurações"
 
@@ -118,6 +122,6 @@ text = "Configurações"
 modulate = Color(1, 0.24313726, 0, 1)
 custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_vi0ms")
+theme_override_fonts/font = ExtResource("4_kdsmm")
 theme_override_font_sizes/font_size = 28
 text = "Sair"
