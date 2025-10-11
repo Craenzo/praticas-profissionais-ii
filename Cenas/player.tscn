@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bkiubqfnfk62c"]
+[gd_scene load_steps=32 format=3 uid="uid://bkiubqfnfk62c"]
 
 [ext_resource type="Texture2D" uid="uid://b84gjvmirtbbn" path="res://Assets/Textures/Pedregulho.jpg" id="1_alogn"]
 [ext_resource type="Script" uid="uid://dmhmwpammr1ka" path="res://Script/character_body_2d.gd" id="2_4j5ex"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://ci4810o6tvnqy" path="res://Assets/MainAnimation/RightAnimation/Catarina_Direita4.png" id="21_jnm6q"]
 [ext_resource type="Texture2D" uid="uid://cq1y0a20gs8hh" path="res://Assets/MainAnimation/StandingAnimation/Catarina_Parada4.png" id="22_157go"]
 [ext_resource type="Texture2D" uid="uid://psfq4cwvtqlg" path="res://Assets/MainAnimation/RightAnimation/Catarina_Direita5.png" id="22_ka0he"]
+[ext_resource type="PackedScene" uid="uid://12ym3je1dem3" path="res://Cenas/menu__de__pausa.tscn" id="27_t7cd8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
 size = Vector2(34, 58)
@@ -187,10 +188,10 @@ metadata/_snap_count = 16
 [node name="Cena" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -12917.0
-offset_top = -10811.0
-offset_right = 13799.0
-offset_bottom = 11143.0
+offset_left = -12902.0
+offset_top = -10853.0
+offset_right = 13814.0
+offset_bottom = 11101.0
 texture = ExtResource("1_alogn")
 stretch_mode = 1
 
@@ -218,3 +219,5 @@ texture_scale = 0.34
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)
+
+[node name="Menu _de _pausa" parent="." instance=ExtResource("27_t7cd8")]
