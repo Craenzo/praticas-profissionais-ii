@@ -62,3 +62,7 @@ func _physics_process(delta):
 			anim.frame = 0
 			anim.position.y = base_y
 			walk_cycle = 0.0
+
+
+#To do: Criar um sistema de inventário
+ 
