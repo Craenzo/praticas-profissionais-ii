@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://12ym3je1dem3"]
 
-[ext_resource type="Script" uid="uid://cnyups38xxw6n" path="res://Cenas/menu__de__pausa.gd" id="1_fu35u"]
+[ext_resource type="Script" uid="uid://cnyups38xxw6n" path="res://Script/menu__de__pausa.gd" id="1_fu35u"]
 [ext_resource type="Shader" uid="uid://cxldy4gqjmaeh" path="res://Assets/Shaders/blur_shader.gdshader" id="1_hykpp"]
-[ext_resource type="Texture2D" uid="uid://c6u6kw5i151ch" path="res://Assets/Textures/imagem_2025-10-07_143741352-removebg-preview.png" id="1_s6tj1"]
+[ext_resource type="Texture2D" uid="uid://c6u6kw5i151ch" path="res://Assets/Textures/menupause.png" id="1_s6tj1"]
 [ext_resource type="FontFile" uid="uid://cbiuxpvn1wrbb" path="res://Assets/Fontes/SGT-Jhon-O.ttf" id="2_hykpp"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_fu35u"]

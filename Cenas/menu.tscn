@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cyftg0sfy8e0m"]
 
 [ext_resource type="Script" uid="uid://q62fha0uqo4t" path="res://Script/menu.gd" id="1_pveh2"]
-[ext_resource type="Texture2D" uid="uid://b4m1f428ewdw2" path="res://Assets/Textures/freepik__retro-game-wallpaper-pixelated-scene-of-a-vast-gra__86894.png" id="2_eheat"]
+[ext_resource type="Texture2D" uid="uid://b4m1f428ewdw2" path="res://Assets/Textures/backgroundmenu.png" id="2_eheat"]
 [ext_resource type="FontFile" uid="uid://cbiuxpvn1wrbb" path="res://Assets/Fontes/SGT-Jhon-O.ttf" id="3_fapvr"]
 [ext_resource type="FontFile" uid="uid://d352knxmg0psm" path="res://Assets/Fontes/Pixellari.ttf" id="4_kdsmm"]
 

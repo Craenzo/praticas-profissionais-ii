@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b84gjvmirtbbn"
-path="res://.godot/imported/Pedregulho.jpg-ca16ef2582684c407d54b6182827acab.ctex"
+uid="uid://c6u6kw5i151ch"
+path="res://.godot/imported/menupause.png-4ccb1ba8753f982a5c786d3ab02214e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/Pedregulho.jpg"
-dest_files=["res://.godot/imported/Pedregulho.jpg-ca16ef2582684c407d54b6182827acab.ctex"]
+source_file="res://Assets/Textures/menupause.png"
+dest_files=["res://.godot/imported/menupause.png-4ccb1ba8753f982a5c786d3ab02214e1.ctex"]
 
 [params]
 
@@ -32,7 +32,7 @@ process/channel_remap/green=1
 process/channel_remap/blue=2
 process/channel_remap/alpha=3
 process/fix_alpha_border=true
-process/premult_alpha=true
+process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
