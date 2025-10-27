@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://b0gs4da0ke3ld"]
+
+[ext_resource type="Texture2D" uid="uid://dxcm7qxrevuxv" path="res://Assets/Textures/pixelated_key.png" id="1_h05lr"]
+[ext_resource type="Script" uid="uid://f57vvhrgy1xh" path="res://Script/ItemData.gd" id="1_m55qa"]
+
+[resource]
+script = ExtResource("1_m55qa")
+item_name = "Chave Dourada"
+item_description = "Uma chave pesada que parece ser feita de ouro maciço"
+item_texture = ExtResource("1_h05lr")
+metadata/_custom_type_script = "uid://f57vvhrgy1xh"

@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://vp6n7a8mfcsw"]
+
+[ext_resource type="Script" uid="uid://clltnvfwpkhjb" path="res://Cenas/item_pickup.gd" id="1_5ogvw"]
+[ext_resource type="Resource" uid="uid://b0gs4da0ke3ld" path="res://Resources/ChavePixelada.tres" id="2_vcs8j"]
+[ext_resource type="Texture2D" uid="uid://dxcm7qxrevuxv" path="res://Assets/Textures/pixelated_key.png" id="2_yyq1f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vcs8j"]
+size = Vector2(1.4928902, 0.11118407)
+
+[sub_resource type="FontFile" id="FontFile_yyq1f"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_olid8"]
+font = SubResource("FontFile_yyq1f")
+font_size = 20
+outline_size = 1
+outline_color = Color(0.986075, 0.9518904, 0.72571135, 1)
+
+[node name="Area2D" type="Area2D" groups=["inventory_pickup"]]
+position = Vector2(3, 8)
+collision_layer = 2
+script = ExtResource("1_5ogvw")
+item_data = ExtResource("2_vcs8j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(32.999996, 35)
+scale = Vector2(0.17848074, 0.18923378)
+texture = ExtResource("2_yyq1f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(33.000004, 35)
+scale = Vector2(43.53971, -620.59247)
+shape = SubResource("RectangleShape2D_vcs8j")
+
+[node name="InteractLabel" type="Label" parent="."]
+visible = false
+offset_left = 38.0
+offset_top = -32.0
+offset_right = 116.0
+offset_bottom = -4.0
+text = "Pegar [F]"
+label_settings = SubResource("LabelSettings_olid8")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

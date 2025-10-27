@@ -16,7 +16,7 @@ func _ready() -> void:
 func on_button_pressed(button: Button) -> void:
 	match button.name:
 		"Jogar":
-			var err = get_tree().change_scene_to_file("res://Cenas/player.tscn")
+			var err = get_tree().change_scene_to_file("res://Cenas/game.tscn")
 			if err != OK:
 				push_error("Falha ao trocar para player.tscn: %s" % str(err))
 		"Saves":
