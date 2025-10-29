@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bkiubqfnfk62c"]
+[gd_scene load_steps=33 format=3 uid="uid://bkiubqfnfk62c"]
 
 [ext_resource type="Texture2D" uid="uid://b84gjvmirtbbn" path="res://Assets/Textures/Pedregulho.jpg" id="1_alogn"]
 [ext_resource type="Script" uid="uid://dmhmwpammr1ka" path="res://Script/character_body_2d.gd" id="2_4j5ex"]
@@ -185,7 +185,10 @@ fill_from = Vector2(0.491453, 0.491453)
 metadata/_snap_enabled = true
 metadata/_snap_count = 16
 
-[node name="Cena" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t7cd8"]
+size = Vector2(34, 58)
+
+[node name="Cena" type="Node2D" groups=["player"]]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -12902.0
@@ -195,7 +198,8 @@ offset_bottom = 11101.0
 texture = ExtResource("1_alogn")
 stretch_mode = 1
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
+z_index = 1
 script = ExtResource("2_4j5ex")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
@@ -216,6 +220,13 @@ range_z_min = -100
 range_z_max = 100
 texture = SubResource("GradientTexture2D_nvl01")
 texture_scale = 0.34
+
+[node name="DetectionArea" type="Area2D" parent="CharacterBody2D"]
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/DetectionArea"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_t7cd8")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)

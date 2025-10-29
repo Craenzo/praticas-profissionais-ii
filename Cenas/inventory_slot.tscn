@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfmk4i4vffcsp"]
+
+[ext_resource type="Script" uid="uid://dtuejoyud3ffb" path="res://Script/inventory_slot.gd" id="1_t22db"]
+
+[node name="InventorySlot" type="TextureButton"]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_t22db")
+
+[node name="ItemIcon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+stretch_mode = 5

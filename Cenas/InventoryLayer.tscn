@@ -1,0 +1,561 @@
+[gd_scene load_steps=12 format=3 uid="uid://bmncvm5up1pq3"]
+
+[ext_resource type="Script" uid="uid://dd821pkkbbv3j" path="res://Script/inventory_ui.gd" id="1_g10m1"]
+[ext_resource type="Texture2D" uid="uid://dqpr3g5dtwe6x" path="res://Assets/Textures/SlotInventario720p.png" id="2_3fvtr"]
+[ext_resource type="FontFile" uid="uid://d352knxmg0psm" path="res://Assets/Fontes/Pixellari.ttf" id="2_c3r11"]
+[ext_resource type="Script" uid="uid://dtuejoyud3ffb" path="res://Script/inventory_slot.gd" id="4_jmnjb"]
+[ext_resource type="Texture2D" uid="uid://c2x8bey0shdsq" path="res://Assets/Textures/Inventariofundo.png" id="4_kpp3v"]
+[ext_resource type="Texture2D" uid="uid://c4omygo25c5xr" path="res://Assets/Textures/inventoryDescricaofundo.png" id="5_jmnjb"]
+[ext_resource type="Texture2D" uid="uid://bjag6ndnhy1jt" path="res://Assets/Textures/ItemSelecionadofundo.png" id="6_p7psp"]
+
+[sub_resource type="FontVariation" id="FontVariation_u6hln"]
+base_font = ExtResource("2_c3r11")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ifucr"]
+font = SubResource("FontVariation_u6hln")
+font_size = 32
+font_color = Color(0.94509804, 0.92156863, 0.85490197, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_qw2m1"]
+base_font = ExtResource("2_c3r11")
+
+[sub_resource type="LabelSettings" id="LabelSettings_knifn"]
+font = SubResource("FontVariation_qw2m1")
+font_size = 20
+
+[node name="InventoryLayer" type="CanvasLayer"]
+
+[node name="InventoryUI" type="Control" parent="." groups=["inventory_ui"]]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_g10m1")
+
+[node name="InventoryPanel" type="Control" parent="InventoryUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 380.0
+offset_bottom = 280.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Itens" type="Label" parent="InventoryUI/InventoryPanel"]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 196.0
+offset_right = 503.0
+offset_bottom = 238.0
+text = "Inventory"
+label_settings = SubResource("LabelSettings_ifucr")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="SlotsGrid" type="GridContainer" parent="InventoryUI/InventoryPanel"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 296.0
+offset_top = 240.0
+offset_right = 367.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 5
+
+[node name="Slot1" type="TextureButton" parent="InventoryUI/InventoryPanel/SlotsGrid"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture_normal = ExtResource("2_3fvtr")
+stretch_mode = 0
+script = ExtResource("4_jmnjb")
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryUI/InventoryPanel/SlotsGrid/Slot1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Slot2" type="TextureButton" parent="InventoryUI/InventoryPanel/SlotsGrid"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture_normal = ExtResource("2_3fvtr")
+stretch_mode = 0
+script = ExtResource("4_jmnjb")
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryUI/InventoryPanel/SlotsGrid/Slot2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Slot3" type="TextureButton" parent="InventoryUI/InventoryPanel/SlotsGrid"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture_normal = ExtResource("2_3fvtr")
+stretch_mode = 0
+script = ExtResource("4_jmnjb")
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryUI/InventoryPanel/SlotsGrid/Slot3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Slot4" type="TextureButton" parent="InventoryUI/InventoryPanel/SlotsGrid"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture_normal = ExtResource("2_3fvtr")
+stretch_mode = 0
+script = ExtResource("4_jmnjb")
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryUI/InventoryPanel/SlotsGrid/Slot4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Slot5" type="TextureButton" parent="InventoryUI/InventoryPanel/SlotsGrid"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture_normal = ExtResource("2_3fvtr")
+stretch_mode = 0
+script = ExtResource("4_jmnjb")
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryUI/InventoryPanel/SlotsGrid/Slot5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Slot6" type="TextureButton" parent="InventoryUI/InventoryPanel/SlotsGrid"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture_normal = ExtResource("2_3fvtr")
+stretch_mode = 0
+script = ExtResource("4_jmnjb")
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryUI/InventoryPanel/SlotsGrid/Slot6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Slot7" type="TextureButton" parent="InventoryUI/InventoryPanel/SlotsGrid"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture_normal = ExtResource("2_3fvtr")
+stretch_mode = 0
+script = ExtResource("4_jmnjb")
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryUI/InventoryPanel/SlotsGrid/Slot7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Slot8" type="TextureButton" parent="InventoryUI/InventoryPanel/SlotsGrid"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture_normal = ExtResource("2_3fvtr")
+stretch_mode = 0
+script = ExtResource("4_jmnjb")
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryUI/InventoryPanel/SlotsGrid/Slot8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Slot9" type="TextureButton" parent="InventoryUI/InventoryPanel/SlotsGrid"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture_normal = ExtResource("2_3fvtr")
+stretch_mode = 0
+script = ExtResource("4_jmnjb")
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryUI/InventoryPanel/SlotsGrid/Slot9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Slot10" type="TextureButton" parent="InventoryUI/InventoryPanel/SlotsGrid"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture_normal = ExtResource("2_3fvtr")
+stretch_mode = 0
+script = ExtResource("4_jmnjb")
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryUI/InventoryPanel/SlotsGrid/Slot10"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Slot11" type="TextureButton" parent="InventoryUI/InventoryPanel/SlotsGrid"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture_normal = ExtResource("2_3fvtr")
+stretch_mode = 0
+script = ExtResource("4_jmnjb")
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryUI/InventoryPanel/SlotsGrid/Slot11"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Slot12" type="TextureButton" parent="InventoryUI/InventoryPanel/SlotsGrid"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture_normal = ExtResource("2_3fvtr")
+stretch_mode = 0
+script = ExtResource("4_jmnjb")
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryUI/InventoryPanel/SlotsGrid/Slot12"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Slot13" type="TextureButton" parent="InventoryUI/InventoryPanel/SlotsGrid"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture_normal = ExtResource("2_3fvtr")
+stretch_mode = 0
+script = ExtResource("4_jmnjb")
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryUI/InventoryPanel/SlotsGrid/Slot13"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Slot14" type="TextureButton" parent="InventoryUI/InventoryPanel/SlotsGrid"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture_normal = ExtResource("2_3fvtr")
+stretch_mode = 0
+script = ExtResource("4_jmnjb")
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryUI/InventoryPanel/SlotsGrid/Slot14"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Slot15" type="TextureButton" parent="InventoryUI/InventoryPanel/SlotsGrid"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture_normal = ExtResource("2_3fvtr")
+stretch_mode = 0
+script = ExtResource("4_jmnjb")
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryUI/InventoryPanel/SlotsGrid/Slot15"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Slot16" type="TextureButton" parent="InventoryUI/InventoryPanel/SlotsGrid"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture_normal = ExtResource("2_3fvtr")
+stretch_mode = 0
+script = ExtResource("4_jmnjb")
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryUI/InventoryPanel/SlotsGrid/Slot16"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Slot17" type="TextureButton" parent="InventoryUI/InventoryPanel/SlotsGrid"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture_normal = ExtResource("2_3fvtr")
+stretch_mode = 0
+script = ExtResource("4_jmnjb")
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryUI/InventoryPanel/SlotsGrid/Slot17"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Slot18" type="TextureButton" parent="InventoryUI/InventoryPanel/SlotsGrid"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture_normal = ExtResource("2_3fvtr")
+stretch_mode = 0
+script = ExtResource("4_jmnjb")
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryUI/InventoryPanel/SlotsGrid/Slot18"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Slot19" type="TextureButton" parent="InventoryUI/InventoryPanel/SlotsGrid"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture_normal = ExtResource("2_3fvtr")
+stretch_mode = 0
+script = ExtResource("4_jmnjb")
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryUI/InventoryPanel/SlotsGrid/Slot19"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Slot20" type="TextureButton" parent="InventoryUI/InventoryPanel/SlotsGrid"]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture_normal = ExtResource("2_3fvtr")
+stretch_mode = 0
+script = ExtResource("4_jmnjb")
+
+[node name="ItemIcon" type="TextureRect" parent="InventoryUI/InventoryPanel/SlotsGrid/Slot20"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -12.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 5
+stretch_mode = 5
+
+[node name="InventoryBackground" type="TextureRect" parent="InventoryUI/InventoryPanel"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 280.0
+offset_top = 176.0
+offset_right = 780.0
+offset_bottom = 546.0
+texture = ExtResource("4_kpp3v")
+
+[node name="SelectedItemPanel" type="Control" parent="InventoryUI"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 138.0
+offset_top = -27.0
+offset_right = 338.0
+offset_bottom = 273.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="SelectedItemIcon" type="TextureRect" parent="InventoryUI/SelectedItemPanel"]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 250.0
+offset_right = 800.0
+offset_bottom = 350.0
+expand_mode = 5
+stretch_mode = 5
+
+[node name="SelectedItemDescription" type="Label" parent="InventoryUI/SelectedItemPanel"]
+layout_mode = 0
+offset_left = 627.0
+offset_top = 342.0
+offset_right = 857.0
+offset_bottom = 502.0
+autowrap_mode = 1
+
+[node name="SelectedItemName" type="Label" parent="InventoryUI/SelectedItemPanel"]
+layout_mode = 0
+offset_left = 649.0
+offset_top = 205.0
+offset_right = 853.0
+offset_bottom = 235.0
+text = "Item Selecionado"
+label_settings = SubResource("LabelSettings_knifn")
+uppercase = true
+
+[node name="DescriptionBackground" type="TextureRect" parent="InventoryUI/SelectedItemPanel"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 614.0
+offset_top = 251.0
+offset_right = 878.0
+offset_bottom = 523.0
+texture = ExtResource("5_jmnjb")
+
+[node name="TextureRect2" type="TextureRect" parent="InventoryUI/SelectedItemPanel"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 614.0
+offset_top = 183.0
+offset_right = 975.0
+offset_bottom = 262.0
+scale = Vector2(0.7298493, 0.81192803)
+texture = ExtResource("6_p7psp")

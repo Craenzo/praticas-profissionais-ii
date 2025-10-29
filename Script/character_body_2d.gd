@@ -11,12 +11,18 @@ var blink_interval = 4.0
 
 var current_dir = "front"  
 
+
 func _ready():
 	base_y = anim.position.y
 	anim.play("front")
 	anim.speed_scale = 1.0  
 
 func _physics_process(delta):
+	var inventory = get_tree().get_first_node_in_group("inventory_ui")
+	if inventory and inventory.is_inventory_open():
+		velocity = Vector2.ZERO
+		return  # sai da função e o personagem não se move
+
 	var input_vector = Vector2.ZERO
 	
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -57,8 +63,12 @@ func _physics_process(delta):
 				anim.frame = 0
 				blink_timer = 0.0
 		else:
-			# mantém parada no frame 0 da direção atual
 			anim.stop()
 			anim.frame = 0
 			anim.position.y = base_y
 			walk_cycle = 0.0
+
+
+
+
+ 
