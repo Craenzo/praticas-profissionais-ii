@@ -6,10 +6,10 @@ func _ready() -> void:
 	   
 		if node is Button:
 			node.connect("pressed", Callable(self, "on_button_pressed").bind(node))
-		if node.has_signal("mouse_entered"):
-			node.connect("mouse_entered", Callable(self, "mouse_interaction").bind(node, "entered"))
-		if node.has_signal("mouse_exited"):
-			node.connect("mouse_exited", Callable(self, "mouse_interaction").bind(node, "exited"))
+		# if node.has_signal("mouse_entered"):
+		# 	node.connect("mouse_entered", Callable(self, "mouse_interaction").bind(node, "entered"))
+		# if node.has_signal("mouse_exited"):
+		# 	node.connect("mouse_exited", Callable(self, "mouse_interaction").bind(node, "exited"))
 
 
 #quando um botão é pressionado

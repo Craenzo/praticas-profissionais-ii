@@ -1,18 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4cmhuhpb86lb"]
+[gd_scene load_steps=6 format=3 uid="uid://b4cmhuhpb86lb"]
 
 [ext_resource type="PackedScene" uid="uid://bkiubqfnfk62c" path="res://Cenas/player.tscn" id="1_wm8yg"]
 [ext_resource type="PackedScene" uid="uid://bmncvm5up1pq3" path="res://Cenas/InventoryLayer.tscn" id="2_pn5db"]
 [ext_resource type="PackedScene" uid="uid://12ym3je1dem3" path="res://Cenas/menu__de__pausa.tscn" id="3_0ft7o"]
 [ext_resource type="PackedScene" uid="uid://vp6n7a8mfcsw" path="res://Cenas/ItemPickup.tscn" id="4_pn5db"]
-[ext_resource type="Texture2D" uid="uid://kl52ckam52f8" path="res://Assets/Textures/hamburguer_pixelado2.webp" id="5_xqjki"]
-[ext_resource type="Script" uid="uid://f57vvhrgy1xh" path="res://Script/ItemData.gd" id="6_ihbji"]
-
-[sub_resource type="Resource" id="Resource_vs7dt"]
-script = ExtResource("6_ihbji")
-item_name = "Haburguer 2"
-item_description = "fala meus manos"
-item_texture = ExtResource("5_xqjki")
-metadata/_custom_type_script = "uid://f57vvhrgy1xh"
+[ext_resource type="Resource" uid="uid://cbbuop6btw83w" path="res://Resources/HamburguerPixelado.tres" id="5_0ft7o"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -28,5 +20,5 @@ scale = Vector2(0.3, 0.3)
 
 [node name="Area2D3" parent="." instance=ExtResource("4_pn5db")]
 position = Vector2(96, 33)
-scale = Vector2(0.3, 0.3)
-item_data = SubResource("Resource_vs7dt")
+scale = Vector2(0.2, 0.2)
+item_data = ExtResource("5_0ft7o")

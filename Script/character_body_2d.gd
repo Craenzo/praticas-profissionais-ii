@@ -11,6 +11,7 @@ var blink_interval = 4.0
 
 var current_dir = "front"  
 
+
 func _ready():
 	base_y = anim.position.y
 	anim.play("front")

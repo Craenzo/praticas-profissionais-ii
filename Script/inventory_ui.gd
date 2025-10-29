@@ -1,21 +1,22 @@
 extends Control
 
 @onready var slots_grid = $InventoryPanel/SlotsGrid
-@onready var selected_icon = $SelectedItemPanel/SelectedItemIcon  # se o nó é SelectedItemIcon mesmo
-@onready var selected_name = $SelectedItemPanel/SelectedItemName  # atenção para "Selected", não "Select"
+@onready var selected_icon = $SelectedItemPanel/SelectedItemIcon  
+@onready var selected_name = $SelectedItemPanel/SelectedItemName  
 @onready var selected_description = $SelectedItemPanel/SelectedItemDescription
 
 
 var is_open = false
 var selected_index = 0
 
-var dragging_item: Texture2D = null   # textura do item que está flutuando
+var dragging_item: Texture2D = null   # textura item flutuante
 var dragging_name: String = ""
 var dragging_description: String = ""
 var dragging_stack: int = 1
-var dragging_icon: TextureRect = null # ícone visual do item flutuante
+var dragging_icon: TextureRect = null # ícone item flutuante
 var using_mouse_drag: bool = false
 
+var _last_hover_index: int = -1
 
 func is_inventory_open() -> bool:
 	return is_open
@@ -29,16 +30,104 @@ func _ready():
 	dragging_icon.modulate = Color(1, 1, 1, 0.8)
 	dragging_icon.visible = false
 	dragging_icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	dragging_icon.expand_mode = TextureRect.EXPAND_FIT_WIDTH  # novo! ajuda a limitar proporção
+	dragging_icon.expand_mode = TextureRect.EXPAND_FIT_WIDTH  #  limita proporção
 	add_child(dragging_icon)
+	dragging_icon.custom_minimum_size = Vector2(74, 74)  # Define tamanho
+
+func _process(_delta):
+
+	if Input.is_action_just_pressed("inventory_toggle"):
+		is_open = !is_open
+		if is_open:
+			show()
+		else:
+			hide()
+
+	if not is_open:
+		return
+
+	_handle_navigation()
+	_update_selection_visual()
+	_handle_mouse_hover()
 	
-	# Define o tamanho depois de adicionar
-	dragging_icon.custom_minimum_size = Vector2(74, 74)  # mesmo tamanho do ItemIcon
+	# move ícone flutuante para o slot selecionado
+	if Input.is_action_just_pressed("ui_accept"):  
+		toggle_drag()
+
+	if dragging_item:
+		if using_mouse_drag:
+			# Modo mouse: segue o cursor
+			dragging_icon.global_position = get_viewport().get_mouse_position() + Vector2(-15, -40)
+		else:
+			# Modo teclado: segue o slot selecionado
+			var slot = slots_grid.get_child(selected_index)
+			var base_pos = slot.get_global_position() - dragging_icon.get_parent().get_global_position()
+			dragging_icon.global_position = base_pos + Vector2(25, -20)
+
+func _input(event):
+	if not is_open:
+		return
+
+	# clClique esquerdo — comportamento estilo "pick up on click"
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		# verifica se clicou em um slot
+		for i in range(slots_grid.get_child_count()):
+			var slot = slots_grid.get_child(i)
+			# event.position está em coordenadas de janela (viewport)
+			if slot.get_global_rect().has_point(event.position):
+				# atualiza seleção visual e índice
+				selected_index = i
+				_update_selection_visual()
+				# alterna o estado do drag (pegar/soltar)
+				toggle_drag()
+				# se após toggle nós estivermos segurando um item, marcamos modo mouse
+				using_mouse_drag = dragging_item != null
+				break
+
+func _handle_mouse_hover():
+	if not is_open:
+		return
+
+	var mouse_pos = get_viewport().get_mouse_position()  # posição global (viewport)
+	var found_index := -1
+
+	# procura primeiro slot cujo rect global contém o ponteiro
+	for i in range(slots_grid.get_child_count()):
+		var slot = slots_grid.get_child(i)
+		# checa visibilidade só para ignorar slots ocultos
+		if not slot.visible:
+			continue
+		# get_global_rect() usa coords globais — combina com get_viewport().get_mouse_position()
+		if slot.get_global_rect().has_point(mouse_pos):
+			found_index = i
+			break
 	
-	# --- TESTE: adicionar item ---
-	#var test_texture = preload("res://Assets/Textures/pixelated_key.png")  # troque pelo caminho real
-	#add_item(test_texture, "Item de teste")
-	
+	# se encontrou um slot sob o cursor e não está arrastando, seleciona
+	if found_index != -1:
+		print("Cursor passou sobre o slot:", found_index)
+		# se mudou o slot de hover
+		if _last_hover_index != found_index:
+			_last_hover_index = found_index
+			# se não estiver arrastando, atualiza seleção como se fosse teclado
+			if not dragging_item:
+				selected_index = found_index
+				_update_selection_visual()
+				_update_selected_item_info()
+			else:
+				# se estiver arrastando, você provavelmente quer destacar também
+				selected_index = found_index
+				_update_selection_visual()
+				# (não necessariamente precisa atualizar o painel quando arrastando)
+	else:
+		# cursor não está sobre nenhum slot
+		if _last_hover_index != -1:
+			_last_hover_index = -1
+			# opcional: limpar seleção apenas se não estiver arrastando
+			if not dragging_item:
+				selected_index = -1
+				_update_selection_visual()
+				_update_selected_item_info()
+
 func add_item(item: ItemData):
 	for i in range(slots_grid.get_child_count()):
 		var slot = slots_grid.get_child(i)
@@ -106,36 +195,6 @@ func _stop_drag():
 	dragging_stack = 1
 	dragging_icon.visible = false
 
-
-func _process(_delta):
-	if Input.is_action_just_pressed("inventory_toggle"):
-		is_open = !is_open
-		if is_open:
-			show()
-		else:
-			hide()
-
-	if not is_open:
-		return
-
-	_handle_navigation()
-	_update_selection_visual()
-	
-	# move ícone flutuante para o slot selecionado
-	if Input.is_action_just_pressed("ui_accept"):  
-		toggle_drag()
-
-	if dragging_item:
-		if using_mouse_drag:
-			# Modo mouse: segue o cursor
-			dragging_icon.global_position = get_viewport().get_mouse_position() + Vector2(-15, -40)
-		else:
-			# Modo teclado: segue o slot selecionado
-			var slot = slots_grid.get_child(selected_index)
-			var base_pos = slot.get_global_position() - dragging_icon.get_parent().get_global_position()
-			dragging_icon.global_position = base_pos + Vector2(25, -20)
-
-
 func _handle_navigation():
 	var prev_index = selected_index
 	var columns = slots_grid.columns
@@ -166,30 +225,16 @@ func _update_selection_visual():
 			slot.self_modulate = Color(0.8, 0.8, 0.8) # opaco
 
 func _update_selected_item_info():
+	if selected_index < 0 or selected_index >= slots_grid.get_child_count():
+		selected_icon.texture = null
+		selected_name.text = "           N/A"
+		selected_description.text = "                    N/A"
+		return
+
 	var selected_slot = slots_grid.get_child(selected_index)
 	if selected_slot.item_texture:
 		selected_icon.texture = selected_slot.item_texture
 	else:
 		selected_icon.texture = null
-	selected_description.text = selected_slot.item_description if selected_slot.item_description != "" else "Sem descrição."
-	selected_name.text = selected_slot.item_name if selected_slot.item_name != "" else "Sem nome"
-
-func _input(event):
-	if not is_open:
-		return
-
-	# clique esquerdo — comportamento estilo "pick up on click"
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		# verifica se clicou em um slot
-		for i in range(slots_grid.get_child_count()):
-			var slot = slots_grid.get_child(i)
-			# event.position está em coordenadas de janela (viewport)
-			if slot.get_global_rect().has_point(event.position):
-				# atualiza seleção visual e índice
-				selected_index = i
-				_update_selection_visual()
-				# alterna o estado do drag (pegar/soltar)
-				toggle_drag()
-				# se após toggle nós estivermos segurando um item, marcamos modo mouse
-				using_mouse_drag = dragging_item != null
-				break
+	selected_description.text = selected_slot.item_description if selected_slot.item_description != "" else "                    N/A"
+	selected_name.text = selected_slot.item_name if selected_slot.item_name != "" else "           N/A"
