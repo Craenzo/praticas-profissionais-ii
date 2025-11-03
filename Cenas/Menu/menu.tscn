@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cyftg0sfy8e0m"]
 
-[ext_resource type="Script" uid="uid://q62fha0uqo4t" path="res://Script/menu.gd" id="1_pveh2"]
-[ext_resource type="Texture2D" uid="uid://b4m1f428ewdw2" path="res://Assets/Textures/backgroundmenu.png" id="2_eheat"]
-[ext_resource type="FontFile" uid="uid://cbiuxpvn1wrbb" path="res://Assets/Fontes/SGT-Jhon-O.ttf" id="3_fapvr"]
-[ext_resource type="FontFile" uid="uid://d352knxmg0psm" path="res://Assets/Fontes/Pixellari.ttf" id="4_kdsmm"]
+[ext_resource type="Script" uid="uid://q62fha0uqo4t" path="res://Script/menu.gd" id="1_cbhtb"]
+[ext_resource type="Texture2D" uid="uid://b4m1f428ewdw2" path="res://Assets/Textures/Menu/backgroundmenu.png" id="2_mxge0"]
+[ext_resource type="FontFile" uid="uid://cbiuxpvn1wrbb" path="res://Assets/Fontes/SGT-Jhon-O.ttf" id="3_a3vp3"]
+[ext_resource type="FontFile" uid="uid://d352knxmg0psm" path="res://Assets/Fontes/Pixellari.ttf" id="4_h6jhd"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -14,7 +14,7 @@ offset_left = -14.0
 offset_right = -14.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_pveh2")
+script = ExtResource("1_cbhtb")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -27,7 +27,7 @@ offset_right = 25.0
 offset_bottom = 134.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_eheat")
+texture = ExtResource("2_mxge0")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -75,7 +75,7 @@ grow_vertical = 2
 custom_minimum_size = Vector2(20, 300)
 layout_mode = 2
 size_flags_vertical = 2
-theme_override_fonts/font = ExtResource("3_fapvr")
+theme_override_fonts/font = ExtResource("3_a3vp3")
 theme_override_font_sizes/font_size = 100
 text = "Subject 217"
 horizontal_alignment = 1
@@ -100,21 +100,21 @@ size_flags_stretch_ratio = 3.89
 modulate = Color(0.69411767, 1, 0.49019608, 1)
 custom_minimum_size = Vector2(100, 80)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_kdsmm")
+theme_override_fonts/font = ExtResource("4_h6jhd")
 theme_override_font_sizes/font_size = 40
 text = "Novo Jogo"
 
 [node name="Saves" type="Button" parent="HBoxContainer2/VBoxContainer" groups=["button"]]
 custom_minimum_size = Vector2(0, 65)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_kdsmm")
+theme_override_fonts/font = ExtResource("4_h6jhd")
 theme_override_font_sizes/font_size = 30
 text = "Carregar jogo"
 
 [node name="Config" type="Button" parent="HBoxContainer2/VBoxContainer" groups=["button"]]
 custom_minimum_size = Vector2(0, 65)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_kdsmm")
+theme_override_fonts/font = ExtResource("4_h6jhd")
 theme_override_font_sizes/font_size = 30
 text = "Configurações"
 
@@ -122,7 +122,7 @@ text = "Configurações"
 modulate = Color(1, 0.24313726, 0, 1)
 custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("4_kdsmm")
+theme_override_fonts/font = ExtResource("4_h6jhd")
 theme_override_font_sizes/font_size = 28
 text = "Sair"
 

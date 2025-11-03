@@ -1,12 +1,12 @@
 [gd_scene load_steps=12 format=3 uid="uid://bmncvm5up1pq3"]
 
 [ext_resource type="Script" uid="uid://dd821pkkbbv3j" path="res://Script/inventory_ui.gd" id="1_g10m1"]
-[ext_resource type="Texture2D" uid="uid://dqpr3g5dtwe6x" path="res://Assets/Textures/SlotInventario720p.png" id="2_3fvtr"]
+[ext_resource type="Texture2D" uid="uid://dqpr3g5dtwe6x" path="res://Assets/Textures/Inventário/SlotInventario720p.png" id="2_3fvtr"]
 [ext_resource type="FontFile" uid="uid://d352knxmg0psm" path="res://Assets/Fontes/Pixellari.ttf" id="2_c3r11"]
 [ext_resource type="Script" uid="uid://dtuejoyud3ffb" path="res://Script/inventory_slot.gd" id="4_jmnjb"]
-[ext_resource type="Texture2D" uid="uid://c2x8bey0shdsq" path="res://Assets/Textures/Inventariofundo.png" id="4_kpp3v"]
-[ext_resource type="Texture2D" uid="uid://c4omygo25c5xr" path="res://Assets/Textures/inventoryDescricaofundo.png" id="5_jmnjb"]
-[ext_resource type="Texture2D" uid="uid://bjag6ndnhy1jt" path="res://Assets/Textures/ItemSelecionadofundo.png" id="6_p7psp"]
+[ext_resource type="Texture2D" uid="uid://c2x8bey0shdsq" path="res://Assets/Textures/Inventário/Inventariofundo.png" id="4_kpp3v"]
+[ext_resource type="Texture2D" uid="uid://c4omygo25c5xr" path="res://Assets/Textures/Inventário/inventoryDescricaofundo.png" id="5_jmnjb"]
+[ext_resource type="Texture2D" uid="uid://bjag6ndnhy1jt" path="res://Assets/Textures/Inventário/ItemSelecionadofundo.png" id="6_p7psp"]
 
 [sub_resource type="FontVariation" id="FontVariation_u6hln"]
 base_font = ExtResource("2_c3r11")

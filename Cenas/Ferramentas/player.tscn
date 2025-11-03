@@ -1,6 +1,5 @@
-[gd_scene load_steps=33 format=3 uid="uid://bkiubqfnfk62c"]
+[gd_scene load_steps=32 format=3 uid="uid://bkiubqfnfk62c"]
 
-[ext_resource type="Texture2D" uid="uid://b84gjvmirtbbn" path="res://Assets/Textures/Pedregulho.jpg" id="1_alogn"]
 [ext_resource type="Script" uid="uid://dmhmwpammr1ka" path="res://Script/character_body_2d.gd" id="2_4j5ex"]
 [ext_resource type="Texture2D" uid="uid://bco2lvvty4ivc" path="res://Assets/MainAnimation/BackAnimation/Catarina_Costa1.png" id="3_dj8y3"]
 [ext_resource type="Texture2D" uid="uid://dsqkav27or6ey" path="res://Assets/MainAnimation/BackAnimation/Catarina_Costa2.png" id="4_wh05g"]
@@ -26,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://ci4810o6tvnqy" path="res://Assets/MainAnimation/RightAnimation/Catarina_Direita4.png" id="21_jnm6q"]
 [ext_resource type="Texture2D" uid="uid://cq1y0a20gs8hh" path="res://Assets/MainAnimation/StandingAnimation/Catarina_Parada4.png" id="22_157go"]
 [ext_resource type="Texture2D" uid="uid://psfq4cwvtqlg" path="res://Assets/MainAnimation/RightAnimation/Catarina_Direita5.png" id="22_ka0he"]
-[ext_resource type="PackedScene" uid="uid://12ym3je1dem3" path="res://Cenas/menu__de__pausa.tscn" id="27_t7cd8"]
+[ext_resource type="PackedScene" uid="uid://12ym3je1dem3" path="res://Cenas/Menu/menu__de__pausa.tscn" id="27_t7cd8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
 size = Vector2(34, 58)
@@ -189,14 +188,6 @@ metadata/_snap_count = 16
 size = Vector2(34, 58)
 
 [node name="Cena" type="Node2D" groups=["player"]]
-
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -12902.0
-offset_top = -10853.0
-offset_right = 13814.0
-offset_bottom = 11101.0
-texture = ExtResource("1_alogn")
-stretch_mode = 1
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
 z_index = 1

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cbbuop6btw83w"]
 
-[ext_resource type="Texture2D" uid="uid://kl52ckam52f8" path="res://Assets/Textures/hamburguer_pixelado2.webp" id="1_oxjti"]
+[ext_resource type="Texture2D" uid="uid://kl52ckam52f8" path="res://Assets/Textures/Inventário/Items/hamburguer_pixelado2.webp" id="1_oxjti"]
 [ext_resource type="Script" uid="uid://f57vvhrgy1xh" path="res://Script/ItemData.gd" id="1_tpvn8"]
 
 [resource]

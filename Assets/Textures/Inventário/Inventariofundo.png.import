@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2x8bey0shdsq"
-path="res://.godot/imported/Inventariofundo.png-52de07ede5328750b266958adc66a9d5.ctex"
+path="res://.godot/imported/Inventariofundo.png-2815813e1f0b3dc8b14065867c84898c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/Inventariofundo.png"
-dest_files=["res://.godot/imported/Inventariofundo.png-52de07ede5328750b266958adc66a9d5.ctex"]
+source_file="res://Assets/Textures/Inventário/Inventariofundo.png"
+dest_files=["res://.godot/imported/Inventariofundo.png-2815813e1f0b3dc8b14065867c84898c.ctex"]
 
 [params]
 

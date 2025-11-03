@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxcm7qxrevuxv"
-path="res://.godot/imported/pixelated_key.png-17c9ce485b55d8d59386b52673088867.ctex"
+uid="uid://kl52ckam52f8"
+path="res://.godot/imported/hamburguer_pixelado2.webp-9a48c9c488b4ff8025803c7ffae193f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/pixelated_key.png"
-dest_files=["res://.godot/imported/pixelated_key.png-17c9ce485b55d8d59386b52673088867.ctex"]
+source_file="res://Assets/Textures/Inventário/Items/hamburguer_pixelado2.webp"
+dest_files=["res://.godot/imported/hamburguer_pixelado2.webp-9a48c9c488b4ff8025803c7ffae193f3.ctex"]
 
 [params]
 

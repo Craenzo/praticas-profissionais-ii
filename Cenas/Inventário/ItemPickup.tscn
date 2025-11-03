@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://vp6n7a8mfcsw"]
 
-[ext_resource type="Script" uid="uid://clltnvfwpkhjb" path="res://Cenas/item_pickup.gd" id="1_5ogvw"]
+[ext_resource type="Script" uid="uid://clltnvfwpkhjb" path="res://Script/item_pickup.gd" id="1_5ogvw"]
 [ext_resource type="Resource" uid="uid://b0gs4da0ke3ld" path="res://Resources/ChavePixelada.tres" id="2_vcs8j"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_yyq1f"]
@@ -10,6 +10,9 @@ load_path = "res://.godot/imported/pixelated_key.png-17c9ce485b55d8d59386b526730
 size = Vector2(1.4928902, 0.11118407)
 
 [sub_resource type="FontFile" id="FontFile_yyq1f"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/16/0/ascent = 0.0
 cache/0/16/0/descent = 0.0
 cache/0/16/0/underline_position = 0.0
@@ -20,6 +23,11 @@ cache/0/20/0/descent = 0.0
 cache/0/20/0/underline_position = 0.0
 cache/0/20/0/underline_thickness = 0.0
 cache/0/20/0/scale = 1.0
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_olid8"]
 font = SubResource("FontFile_yyq1f")

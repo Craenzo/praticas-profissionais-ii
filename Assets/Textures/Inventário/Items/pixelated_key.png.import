@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4omygo25c5xr"
-path="res://.godot/imported/inventoryDescricaofundo.png-09e3fae7e30e98a1b6818ebcfd3ce180.ctex"
+uid="uid://dxcm7qxrevuxv"
+path="res://.godot/imported/pixelated_key.png-a9ddee426b93a49161cda01a5e4a0a99.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/inventoryDescricaofundo.png"
-dest_files=["res://.godot/imported/inventoryDescricaofundo.png-09e3fae7e30e98a1b6818ebcfd3ce180.ctex"]
+source_file="res://Assets/Textures/Inventário/Items/pixelated_key.png"
+dest_files=["res://.godot/imported/pixelated_key.png-a9ddee426b93a49161cda01a5e4a0a99.ctex"]
 
 [params]
 

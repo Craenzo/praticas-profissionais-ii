@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4cmhuhpb86lb"]
+
+[ext_resource type="PackedScene" uid="uid://bkiubqfnfk62c" path="res://Cenas/Ferramentas/player.tscn" id="1_3v3t2"]
+[ext_resource type="PackedScene" uid="uid://bmncvm5up1pq3" path="res://Cenas/Inventário/InventoryLayer.tscn" id="2_4cvfv"]
+[ext_resource type="PackedScene" uid="uid://12ym3je1dem3" path="res://Cenas/Menu/menu__de__pausa.tscn" id="3_3jfon"]
+[ext_resource type="PackedScene" uid="uid://vp6n7a8mfcsw" path="res://Cenas/Inventário/ItemPickup.tscn" id="4_hbypc"]
+[ext_resource type="Resource" uid="uid://cbbuop6btw83w" path="res://Resources/HamburguerPixelado.tres" id="5_nyc8b"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Cena" parent="." instance=ExtResource("1_3v3t2")]
+
+[node name="InventoryLayer" parent="." instance=ExtResource("2_4cvfv")]
+
+[node name="Menu _de _pausa" parent="." instance=ExtResource("3_3jfon")]
+
+[node name="Area2D" parent="." instance=ExtResource("4_hbypc")]
+position = Vector2(22, -66)
+scale = Vector2(0.3, 0.3)
+
+[node name="Area2D3" parent="." instance=ExtResource("4_hbypc")]
+position = Vector2(96, 33)
+scale = Vector2(0.2, 0.2)
+item_data = ExtResource("5_nyc8b")
