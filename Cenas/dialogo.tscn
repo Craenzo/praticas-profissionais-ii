@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5o2rcxykd765"]
+
+[ext_resource type="Texture2D" uid="uid://dpu0ytuhwwghn" path="res://Assets/Textures/Gemini_Generated_Image_dbdpivdbdpivdbdp (1).png" id="1_d7n07"]
+[ext_resource type="Script" uid="uid://c7yc5g8hsyry8" path="res://Script/dialog_box.gd" id="2_8abie"]
+[ext_resource type="FontFile" uid="uid://d352knxmg0psm" path="res://Assets/Fontes/Pixellari.ttf" id="2_w74h6"]
+
+[node name="Dialogo" type="Node2D"]
+
+[node name="DialogBox" type="NinePatchRect" parent="."]
+offset_left = 171.0
+offset_top = 232.0
+offset_right = 1199.0
+offset_bottom = 710.0
+texture = ExtResource("1_d7n07")
+script = ExtResource("2_8abie")
+
+[node name="Text" type="RichTextLabel" parent="DialogBox"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 138.0
+offset_right = 674.0
+offset_bottom = 255.0
+theme_override_fonts/normal_font = ExtResource("2_w74h6")
+
+[node name="Timer" type="Timer" parent="DialogBox"]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="DialogBox/Timer" to="DialogBox" method="_on_timer_timeout"]
