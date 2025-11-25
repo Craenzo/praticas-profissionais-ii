@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://7siklftkdk1y"]
+[gd_scene load_steps=15 format=3 uid="uid://7siklftkdk1y"]
 
 [ext_resource type="Texture2D" uid="uid://6e3dacpbg74g" path="res://Assets/TileSets/EscolaTileSet/A5.png" id="1_na8tu"]
 [ext_resource type="Texture2D" uid="uid://bqd8uyf740no8" path="res://Assets/TileSets/EscolaTileSet/A4.png" id="2_vmfpm"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://djv7q7ccudsn3" path="res://Assets/TileSets/EscolaTileSet/Inside_D.png" id="4_1et0o"]
 [ext_resource type="Texture2D" uid="uid://docii5lbwcux8" path="res://Assets/TileSets/EscolaTileSet/Inside_E.png" id="5_gt4kr"]
 [ext_resource type="Texture2D" uid="uid://cawvpr4qrjesi" path="res://Assets/TileSets/EscolaTileSet/Outside.png" id="6_3odnw"]
+[ext_resource type="PackedScene" uid="uid://bkiubqfnfk62c" path="res://Cenas/Ferramentas/player.tscn" id="7_na8tu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sqh2b"]
 texture = ExtResource("1_na8tu")
@@ -5105,3 +5106,6 @@ tile_set = SubResource("TileSet_t7tsp")
 
 [node name="ParedeL2" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_t7tsp")
+
+[node name="Cena" parent="." instance=ExtResource("7_na8tu")]
+visible = false
