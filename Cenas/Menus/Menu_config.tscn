@@ -1,0 +1,198 @@
+[gd_scene load_steps=5 format=3 uid="uid://bu3m0jx18las1"]
+
+[ext_resource type="Texture2D" uid="uid://iewwhem44te7" path="res://Assets/Textures/Menus/Gemini_Generated_Image_qa4xpsqa4xpsqa4x.png" id="1_ujvhg"]
+[ext_resource type="FontFile" uid="uid://k1ld8akyniv7" path="res://Assets/Fontes/MotionControl-Bold.otf" id="2_c1eni"]
+[ext_resource type="FontFile" uid="uid://750hbfutqokv" path="res://Assets/Fontes/PixelPurl.ttf" id="3_kwiw5"]
+
+[sub_resource type="GDScript" id="GDScript_n81uv"]
+script/source = "extends Control
+
+# Defina os caminhos das cenas como strings 
+var scenes: Dictionary = {
+	\"video\": \"\",
+	\"audio\": \"res://Cenas/Menus/audio_menu.tscn\",
+	\"controles\": \"\",
+	\"creditos\": \"\"
+}
+
+func _ready() -> void:
+	for node in get_tree().get_nodes_in_group(\"botoes_config\"):
+		if node is Button:
+			node.pressed.connect(Callable(self, \"_on_pressed\").bind(node))
+			if node.has_signal(\"mouse_entered\"):
+				node.mouse_entered.connect(Callable(self, \"_on_hover\").bind(node, true))
+			if node.has_signal(\"mouse_exited\"):
+				node.mouse_exited.connect(Callable(self, \"_on_hover\").bind(node, false))
+		else:
+			push_warning(\"%s no grupo 'botoes_config' não é Button.\" % str(node))
+
+func _on_pressed(button: Button) -> void:
+	var key: String = button.name
+	if not scenes.has(key):
+		push_warning(\"Nenhuma cena configurada para: %s\" % key)
+		return
+	var target: String = scenes[key] # <- aqui declaramos explicitamente String
+	if target != \"\":
+		var err: int = get_tree().change_scene_to_file(target)
+		if err != OK:
+			push_error(\"Erro ao trocar cena (%s): %s\" % [key, str(err)])
+	else:
+		push_warning(\"Valor inválido para scenes['%s'] ou caminho vazio.\" % key)
+
+func _on_hover(button: Button, entered: bool) -> void:
+	button.scale = Vector2(1.05, 1.05) if entered else Vector2.ONE
+"
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_n81uv")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 14.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("1_ujvhg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -559.0
+offset_top = -577.0
+offset_right = 528.0
+offset_bottom = 447.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_c1eni")
+theme_override_font_sizes/font_size = 70
+text = "CONFIGURAÇÕES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(100, 200)
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 268.0
+offset_top = 313.0
+offset_right = -662.0
+offset_bottom = -207.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="video" type="Button" parent="HBoxContainer" groups=["botoes_config"]]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0.44705883)
+theme_override_fonts/font = ExtResource("3_kwiw5")
+theme_override_font_sizes/font_size = 40
+text = "VIDEO"
+flat = true
+icon_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(100, 200)
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 687.0
+offset_top = 310.0
+offset_right = -243.0
+offset_bottom = -210.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="audio" type="Button" parent="HBoxContainer2" groups=["botoes_config"]]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0.44705883)
+theme_override_fonts/font = ExtResource("3_kwiw5")
+theme_override_font_sizes/font_size = 40
+text = "AUDIO"
+flat = true
+icon_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(100, 200)
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 265.0
+offset_top = 433.0
+offset_right = -665.0
+offset_bottom = -87.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="controles" type="Button" parent="HBoxContainer3" groups=["botoes_config"]]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0.44705883)
+theme_override_fonts/font = ExtResource("3_kwiw5")
+theme_override_font_sizes/font_size = 40
+text = "CONTROLES"
+flat = true
+icon_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="." groups=["botoes_config"]]
+clip_contents = true
+custom_minimum_size = Vector2(100, 200)
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 693.0
+offset_top = 430.0
+offset_right = -237.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="creditos" type="Button" parent="HBoxContainer4" groups=["botoes_config"]]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0.44705883)
+theme_override_fonts/font = ExtResource("3_kwiw5")
+theme_override_font_sizes/font_size = 40
+text = "CREDITOS"
+flat = true
+icon_alignment = 1

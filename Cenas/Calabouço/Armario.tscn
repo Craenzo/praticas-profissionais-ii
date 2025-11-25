@@ -1,0 +1,99 @@
+[gd_scene load_steps=22 format=3 uid="uid://b2cikfm5s3ai2"]
+
+[ext_resource type="Texture2D" uid="uid://bd2wdaw0cw8p5" path="res://Assets/Textures/Calabouço/Armário/frame0000.png" id="1_aauc5"]
+[ext_resource type="Texture2D" uid="uid://2tpfp6jmtcrm" path="res://Assets/Textures/Calabouço/Armário/frame0001.png" id="2_u4pnc"]
+[ext_resource type="Texture2D" uid="uid://cr0fg5fqw0j6x" path="res://Assets/Textures/Calabouço/Armário/frame0003.png" id="3_r80nh"]
+[ext_resource type="Texture2D" uid="uid://br0i5j5xotpcx" path="res://Assets/Textures/Calabouço/Armário/frame0004.png" id="4_hbaml"]
+[ext_resource type="Texture2D" uid="uid://b2sasdg8n5kal" path="res://Assets/Textures/Calabouço/Armário/frame0005.png" id="5_je54q"]
+[ext_resource type="Texture2D" uid="uid://bc2pmgj6et4wb" path="res://Assets/Textures/Calabouço/Armário/frame0006.png" id="6_8t4s5"]
+[ext_resource type="Texture2D" uid="uid://cgmfgpoy3j2gx" path="res://Assets/Textures/Calabouço/Armário/frame0007.png" id="7_t50w1"]
+[ext_resource type="Texture2D" uid="uid://7fio4lfc5kbd" path="res://Assets/Textures/Calabouço/Armário/frame0008.png" id="8_ndd6q"]
+[ext_resource type="Texture2D" uid="uid://ds3yikvm5ih7o" path="res://Assets/Textures/Calabouço/Armário/frame0010.png" id="9_ks182"]
+[ext_resource type="Texture2D" uid="uid://cy0yuds37k7w7" path="res://Assets/Textures/Calabouço/Armário/frame0011.png" id="10_v0i4o"]
+[ext_resource type="Texture2D" uid="uid://bu1ser03gyo85" path="res://Assets/Textures/Calabouço/Armário/frame0013.png" id="11_ngkyn"]
+[ext_resource type="Texture2D" uid="uid://xxtwbmy66p7q" path="res://Assets/Textures/Calabouço/Armário/frame0014.png" id="12_a4ow5"]
+[ext_resource type="Texture2D" uid="uid://cyrdvhcnvitxi" path="res://Assets/Textures/Calabouço/Armário/frame0015.png" id="13_fjjnr"]
+[ext_resource type="Texture2D" uid="uid://bv3guhc11t271" path="res://Assets/Textures/Calabouço/Armário/frame0016.png" id="14_b7xus"]
+[ext_resource type="Texture2D" uid="uid://p1o6x71406ld" path="res://Assets/Textures/Calabouço/Armário/frame0017.png" id="15_tm6uv"]
+[ext_resource type="Texture2D" uid="uid://b8715xkj5kqml" path="res://Assets/Textures/Calabouço/Armário/frame0018.png" id="16_q6de3"]
+[ext_resource type="Texture2D" uid="uid://f8hhmajsbcvq" path="res://Assets/Textures/Calabouço/Armário/frame0019.png" id="17_mvwjq"]
+[ext_resource type="Texture2D" uid="uid://bqn7rghiwb4o6" path="res://Assets/Textures/Calabouço/Armário/frame0020.png" id="18_ak1d7"]
+[ext_resource type="Texture2D" uid="uid://qtir1abpn776" path="res://Assets/Textures/Calabouço/Armário/frame0021.png" id="19_c3uhu"]
+[ext_resource type="Texture2D" uid="uid://tupgkmix7bb3" path="res://Assets/Textures/Calabouço/Armário/frame0022.png" id="20_q7c7d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eraiw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_aauc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_u4pnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_r80nh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hbaml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_je54q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8t4s5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_t50w1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ndd6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ks182")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_v0i4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ngkyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_a4ow5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_fjjnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_b7xus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_tm6uv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_q6de3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_mvwjq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ak1d7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_c3uhu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_q7c7d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 25.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ArmárioAbrindo" type="AnimatedSprite2D" parent="."]
+position = Vector2(-10.999998, 6.4999933)
+scale = Vector2(1.453125, 1.6171875)
+sprite_frames = SubResource("SpriteFrames_eraiw")
+autoplay = "default"
+frame_progress = 0.67396176

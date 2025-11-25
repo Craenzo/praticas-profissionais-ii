@@ -1,0 +1,74 @@
+[gd_scene load_steps=14 format=3 uid="uid://dffrlf3vniymf"]
+
+[ext_resource type="PackedScene" uid="uid://20tu5ouyy3uk" path="res://Cenas/Calabouço/area_interacao.tscn" id="1_y7cpa"]
+[ext_resource type="Texture2D" uid="uid://1vyq6immclp0" path="res://Assets/Textures/Calabouço/Caixao67/frame0000.png" id="2_kevt0"]
+[ext_resource type="Texture2D" uid="uid://bae6tdt2yisuk" path="res://Assets/Textures/Calabouço/Caixao67/frame0001.png" id="3_nasa7"]
+[ext_resource type="Texture2D" uid="uid://hthr1qydhndk" path="res://Assets/Textures/Calabouço/Caixao67/frame0002.png" id="4_r03aj"]
+[ext_resource type="Texture2D" uid="uid://cidbt5iq0n72o" path="res://Assets/Textures/Calabouço/Caixao67/frame0003.png" id="5_jh3ky"]
+[ext_resource type="Texture2D" uid="uid://cvgo8r7tonkd8" path="res://Assets/Textures/Calabouço/Caixao67/frame0004.png" id="6_hd5ta"]
+[ext_resource type="Texture2D" uid="uid://bo10g75f0at0b" path="res://Assets/Textures/Calabouço/Caixao67/frame0005.png" id="7_10fyc"]
+[ext_resource type="Texture2D" uid="uid://7jeps6gg6ies" path="res://Assets/Textures/Calabouço/Caixao67/frame0006.png" id="8_wjx64"]
+[ext_resource type="Texture2D" uid="uid://cy6f6ona7epfy" path="res://Assets/Textures/Calabouço/Caixao67/frame0007.png" id="9_now3r"]
+[ext_resource type="Script" uid="uid://v7nimhkkk5ko" path="res://Script/caixao_67.gd" id="10_y7cpa"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aafj5"]
+radius = 42.0
+height = 88.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p3vte"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kevt0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nasa7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_r03aj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jh3ky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hd5ta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_10fyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wjx64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_now3r")
+}],
+"loop": false,
+"name": &"caixao67",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5s3an"]
+size = Vector2(38.69405, 26.000015)
+
+[node name="Caixao67" type="Node2D"]
+
+[node name="AreaInteracao" parent="." instance=ExtResource("1_y7cpa")]
+
+[node name="Delimite de interação" type="CollisionShape2D" parent="AreaInteracao"]
+position = Vector2(-66, -196)
+shape = SubResource("CapsuleShape2D_aafj5")
+
+[node name="Caixao67" type="AnimatedSprite2D" parent="AreaInteracao"]
+position = Vector2(-26.000011, -202)
+scale = Vector2(1.6540006, 2)
+sprite_frames = SubResource("SpriteFrames_p3vte")
+animation = &"caixao67"
+script = ExtResource("10_y7cpa")
+
+[node name="Blocker" type="StaticBody2D" parent="AreaInteracao/Caixao67"]
+position = Vector2(84.03867, 52.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaInteracao/Caixao67/Blocker"]
+position = Vector2(-107.01326, -49)
+scale = Vector2(0.9999999, 0.99999934)
+shape = SubResource("RectangleShape2D_5s3an")

@@ -1,0 +1,228 @@
+[gd_scene load_steps=50 format=3 uid="uid://cj11pljrwadm8"]
+
+[ext_resource type="PackedScene" uid="uid://20tu5ouyy3uk" path="res://Cenas/Calabouço/area_interacao.tscn" id="1_sb2m7"]
+[ext_resource type="Texture2D" uid="uid://cpsnlmhno5g70" path="res://Assets/Textures/Calabouço/CaixaoVermelho/frame0000.png" id="2_8tjpa"]
+[ext_resource type="Texture2D" uid="uid://bgtiw4acfr21v" path="res://Assets/Textures/Calabouço/CaixaoVermelho/frame0001.png" id="3_bjjes"]
+[ext_resource type="Texture2D" uid="uid://benvmptq2kxuv" path="res://Assets/Textures/Calabouço/CaixaoVermelho/frame0002.png" id="4_f7hdb"]
+[ext_resource type="Texture2D" uid="uid://by36fx1knqwie" path="res://Assets/Textures/Calabouço/CaixaoVermelho/frame0003.png" id="5_g4jmu"]
+[ext_resource type="Texture2D" uid="uid://cheldf6buf22g" path="res://Assets/Textures/Calabouço/CaixaoVermelho/frame0004.png" id="6_yrcdg"]
+[ext_resource type="Texture2D" uid="uid://bn1fciolxv68t" path="res://Assets/Textures/Calabouço/CaixaoVermelho/frame0005.png" id="7_ah2nm"]
+[ext_resource type="Texture2D" uid="uid://bxb500txv0ved" path="res://Assets/Textures/Calabouço/CaixaoVermelho/frame0006.png" id="8_12ynl"]
+[ext_resource type="Texture2D" uid="uid://dbq28aia3sy1k" path="res://Assets/Textures/Calabouço/CaixaoVermelho/frame0007.png" id="9_t5jrb"]
+[ext_resource type="Script" uid="uid://8t4f61e1nbpo" path="res://caixao_vermelho.gd" id="10_5txgq"]
+[ext_resource type="Texture2D" uid="uid://r57wojil8wji" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0000.png" id="11_qfvj1"]
+[ext_resource type="Texture2D" uid="uid://uun618dy3g8g" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0001.png" id="12_bsh2v"]
+[ext_resource type="Texture2D" uid="uid://ckg4n130vfukh" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0002.png" id="13_pf5vv"]
+[ext_resource type="Texture2D" uid="uid://lbta7jxthgro" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0003.png" id="14_tuutg"]
+[ext_resource type="Texture2D" uid="uid://c4rohjjfnninm" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0004.png" id="15_1qfy8"]
+[ext_resource type="Texture2D" uid="uid://dm61w832upp32" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0005.png" id="16_aw68u"]
+[ext_resource type="Texture2D" uid="uid://co62lfu244mkp" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0006.png" id="17_aifcx"]
+[ext_resource type="Texture2D" uid="uid://76ljor0530qb" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0007.png" id="18_nxwy0"]
+[ext_resource type="Texture2D" uid="uid://wecrxy4bs423" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0008.png" id="19_mmftv"]
+[ext_resource type="Texture2D" uid="uid://du3rigf1dj26x" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0009.png" id="20_x0dso"]
+[ext_resource type="Texture2D" uid="uid://dve32k0nlnl6a" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0010.png" id="21_jkuti"]
+[ext_resource type="Texture2D" uid="uid://bav4ptdgcg7ms" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0011.png" id="22_76l6j"]
+[ext_resource type="Texture2D" uid="uid://bd10d6fxkbel6" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0012.png" id="23_64may"]
+[ext_resource type="Texture2D" uid="uid://dhlwlo3w513xj" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0013.png" id="24_15yrk"]
+[ext_resource type="Texture2D" uid="uid://d0jotl6v3xfyo" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0014.png" id="25_1uoje"]
+[ext_resource type="Texture2D" uid="uid://qbtvicb1kows" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0015.png" id="26_o4sap"]
+[ext_resource type="Texture2D" uid="uid://dfhsoqh8oulhp" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0016.png" id="27_jlnog"]
+[ext_resource type="Texture2D" uid="uid://8kiitsjouh22" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0017.png" id="28_dnu22"]
+[ext_resource type="Texture2D" uid="uid://dgjnqhbq0pfi0" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0018.png" id="29_ussws"]
+[ext_resource type="Texture2D" uid="uid://cfn4bmbegpsu" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0019.png" id="30_h6jnc"]
+[ext_resource type="Texture2D" uid="uid://c0qtgoxr14mcy" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0020.png" id="31_0dkys"]
+[ext_resource type="Texture2D" uid="uid://bxvsujrto4ccj" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0021.png" id="32_meacy"]
+[ext_resource type="Texture2D" uid="uid://pb2nbnd64hi5" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0022.png" id="33_2y7bp"]
+[ext_resource type="Texture2D" uid="uid://b732f00q0hsgg" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0023.png" id="34_8wx26"]
+[ext_resource type="Texture2D" uid="uid://curcp38pcibff" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0024.png" id="35_xsvk3"]
+[ext_resource type="Texture2D" uid="uid://kuocelmbv3tl" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0025.png" id="36_qyf7p"]
+[ext_resource type="Texture2D" uid="uid://crwgtywimbfsw" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0026.png" id="37_8id00"]
+[ext_resource type="Texture2D" uid="uid://b3d6mgswer437" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0027.png" id="38_oxnp4"]
+[ext_resource type="Texture2D" uid="uid://bgx51fl7wmymv" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0028.png" id="39_nlxn6"]
+[ext_resource type="Texture2D" uid="uid://wr2fklvykj6d" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0029.png" id="40_37h3i"]
+[ext_resource type="Texture2D" uid="uid://d2rexd1xvb5h0" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0030.png" id="41_xtcdw"]
+[ext_resource type="Texture2D" uid="uid://dpnyiatrttbbe" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0031.png" id="42_ijxhi"]
+[ext_resource type="Texture2D" uid="uid://b7lg50bl0qcfi" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0032.png" id="43_gi88f"]
+[ext_resource type="Texture2D" uid="uid://bx8il6rskn3ot" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0033.png" id="44_dj1rs"]
+[ext_resource type="Texture2D" uid="uid://bta70uqe7skeq" path="res://Assets/Textures/Calabouço/RealidadeQuebrada/frame0034.png" id="45_sy7pu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ue6dj"]
+radius = 27.0
+height = 54.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qktnu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8tjpa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bjjes")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_f7hdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g4jmu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yrcdg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ah2nm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_12ynl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_t5jrb")
+}],
+"loop": false,
+"name": &"caixaovermelho",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qvnql"]
+size = Vector2(16.324059, 12.875008)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6ukru"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_qfvj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_bsh2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pf5vv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tuutg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1qfy8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_aw68u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_aifcx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_nxwy0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_mmftv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_x0dso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_jkuti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_76l6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_64may")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_15yrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_1uoje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_o4sap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_jlnog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_dnu22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ussws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_h6jnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_0dkys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_meacy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_2y7bp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_8wx26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_xsvk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_qyf7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_8id00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_oxnp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_nlxn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_37h3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_xtcdw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_ijxhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_gi88f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_dj1rs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_sy7pu")
+}],
+"loop": false,
+"name": &"RealidadeQuebrando",
+"speed": 12.0
+}]
+
+[node name="CaixaoChaveVermelha" type="Node2D"]
+
+[node name="AreaInteracao" parent="." instance=ExtResource("1_sb2m7")]
+
+[node name="Delimite de interação" type="CollisionShape2D" parent="AreaInteracao"]
+position = Vector2(142, -39)
+shape = SubResource("CapsuleShape2D_ue6dj")
+
+[node name="CaixaoVermelho" type="AnimatedSprite2D" parent="AreaInteracao"]
+position = Vector2(166, -43)
+sprite_frames = SubResource("SpriteFrames_qktnu")
+animation = &"caixaovermelho"
+script = ExtResource("10_5txgq")
+
+[node name="Blocker" type="StaticBody2D" parent="AreaInteracao/CaixaoVermelho"]
+position = Vector2(-58.000008, -210)
+scale = Vector2(1.6540006, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaInteracao/CaixaoVermelho/Blocker"]
+position = Vector2(20.85852, 106.5625)
+scale = Vector2(0.9999999, 0.99999934)
+shape = SubResource("RectangleShape2D_qvnql")
+
+[node name="RealidadeQuebrando" type="AnimatedSprite2D" parent="."]
+position = Vector2(475.00003, -71)
+scale = Vector2(2.2294922, 2.7597656)
+sprite_frames = SubResource("SpriteFrames_6ukru")
+animation = &"RealidadeQuebrando"

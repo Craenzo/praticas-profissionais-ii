@@ -1,0 +1,91 @@
+[gd_scene load_steps=8 format=3 uid="uid://bgvj6jh7lde6g"]
+
+[ext_resource type="Texture2D" uid="uid://bl8pq22b5r8le" path="res://Assets/Textures/Calabouço/Imagem do WhatsApp de 2025-11-24 à(s) 20.40.54_504bde75.jpg" id="1_o2eir"]
+[ext_resource type="PackedScene" uid="uid://bkiubqfnfk62c" path="res://Cenas/player.tscn" id="2_22y84"]
+[ext_resource type="PackedScene" uid="uid://b2cikfm5s3ai2" path="res://Cenas/Calabouço/Armario.tscn" id="3_22y84"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_22y84"]
+size = Vector2(1593.5, 118.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_muuhe"]
+size = Vector2(78.375, 1014.9375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7wlmy"]
+size = Vector2(230, 252)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3h7cs"]
+size = Vector2(97, 74)
+
+[node name="Quarto2" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(10000, 10000)
+offset_left = -2927.0
+offset_top = -6478.0
+offset_right = 7073.0
+offset_bottom = 3522.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -916.0
+offset_top = -263.0
+offset_right = 684.0
+offset_bottom = 876.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_o2eir")
+
+[node name="Player" parent="." instance=ExtResource("2_22y84")]
+visible = false
+position = Vector2(-249, 807)
+
+[node name="Limite do mapa" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limite do mapa"]
+position = Vector2(750, 911)
+shape = SubResource("RectangleShape2D_22y84")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Limite do mapa"]
+position = Vector2(-1036, 925)
+shape = SubResource("RectangleShape2D_22y84")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Limite do mapa"]
+position = Vector2(-920, 351.53125)
+shape = SubResource("RectangleShape2D_muuhe")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Limite do mapa"]
+position = Vector2(-131, -221)
+shape = SubResource("RectangleShape2D_22y84")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Limite do mapa"]
+position = Vector2(672, 340)
+shape = SubResource("RectangleShape2D_muuhe")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Limite do mapa"]
+position = Vector2(-138, 1015)
+shape = SubResource("RectangleShape2D_7wlmy")
+
+[node name="Node2D" parent="Limite do mapa/CollisionShape2D6" instance=ExtResource("3_22y84")]
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Limite do mapa"]
+position = Vector2(131.5, 677)
+shape = SubResource("RectangleShape2D_3h7cs")
+
+[node name="Armario" parent="." instance=ExtResource("3_22y84")]
+position = Vector2(22, -133)
+
+[node name="Armario2" parent="." instance=ExtResource("3_22y84")]
+position = Vector2(-283, -140)
+
+[node name="Armario3" parent="." instance=ExtResource("3_22y84")]
+position = Vector2(-128, -141)
+
+[node name="Armario4" parent="." instance=ExtResource("3_22y84")]
+position = Vector2(174, -139)

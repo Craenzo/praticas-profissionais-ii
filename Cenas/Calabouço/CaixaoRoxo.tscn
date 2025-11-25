@@ -1,0 +1,45 @@
+[gd_scene load_steps=9 format=3 uid="uid://bbepif877ykf2"]
+
+[ext_resource type="Texture2D" uid="uid://duu86yntgjiiw" path="res://Assets/Textures/Calabouço/CaixaoChaveRoxa/frame0000.png" id="1_bycoc"]
+[ext_resource type="Texture2D" uid="uid://bbcyuurnrc7yt" path="res://Assets/Textures/Calabouço/CaixaoChaveRoxa/frame0001.png" id="2_fv3qe"]
+[ext_resource type="Texture2D" uid="uid://hxijxc8c7q7n" path="res://Assets/Textures/Calabouço/CaixaoChaveRoxa/frame0002.png" id="3_anty5"]
+[ext_resource type="Texture2D" uid="uid://8w7ikvuab2lv" path="res://Assets/Textures/Calabouço/CaixaoChaveRoxa/frame0003.png" id="4_0f4ii"]
+[ext_resource type="Texture2D" uid="uid://cq5gkq88nvjhw" path="res://Assets/Textures/Calabouço/CaixaoChaveRoxa/frame0004.png" id="5_y0nun"]
+[ext_resource type="Texture2D" uid="uid://b3m3q1ne41xk1" path="res://Assets/Textures/Calabouço/CaixaoChaveRoxa/frame0005.png" id="6_1pa6f"]
+[ext_resource type="Texture2D" uid="uid://biqd0s3lcs11h" path="res://Assets/Textures/Calabouço/CaixaoChaveRoxa/frame0006.png" id="7_kkwhn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l81gf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bycoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fv3qe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_anty5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0f4ii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_y0nun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1pa6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kkwhn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_l81gf")
+autoplay = "default"
+frame_progress = 0.59677905

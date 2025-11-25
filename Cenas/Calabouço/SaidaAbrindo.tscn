@@ -1,0 +1,141 @@
+[gd_scene load_steps=33 format=3 uid="uid://b6ckkha1jvbg8"]
+
+[ext_resource type="Texture2D" uid="uid://byuro0h0jumwd" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0000.png" id="1_kycsg"]
+[ext_resource type="Texture2D" uid="uid://c3kyu5apmctkn" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0001.png" id="2_t3ijq"]
+[ext_resource type="Texture2D" uid="uid://rptdn17dv5jx" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0002.png" id="3_fmgao"]
+[ext_resource type="Texture2D" uid="uid://b4ied2n43tul" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0003.png" id="4_3yx7x"]
+[ext_resource type="Texture2D" uid="uid://bo2bl1lw087o" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0004.png" id="5_38ayo"]
+[ext_resource type="Texture2D" uid="uid://dbc8hn6n0ofpj" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0005.png" id="6_jof67"]
+[ext_resource type="Texture2D" uid="uid://cebba6qbfft8e" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0006.png" id="7_g4a6y"]
+[ext_resource type="Texture2D" uid="uid://cncqmq6ekinde" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0007.png" id="8_f644e"]
+[ext_resource type="Texture2D" uid="uid://g117vue3wla" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0008.png" id="9_hw8wt"]
+[ext_resource type="Texture2D" uid="uid://dw3x2aml5e72a" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0009.png" id="10_jxsl0"]
+[ext_resource type="Texture2D" uid="uid://djcprqevf0nc3" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0010.png" id="11_1j3mi"]
+[ext_resource type="Texture2D" uid="uid://q4rbletwr7fd" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0011.png" id="12_c3iyl"]
+[ext_resource type="Texture2D" uid="uid://cktkp8og5qery" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0012.png" id="13_27xdi"]
+[ext_resource type="Texture2D" uid="uid://clhmwj6jplvkw" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0013.png" id="14_sj2hu"]
+[ext_resource type="Texture2D" uid="uid://d26h524rxahwg" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0014.png" id="15_qa65j"]
+[ext_resource type="Texture2D" uid="uid://dxq4n825jloq6" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0015.png" id="16_u64it"]
+[ext_resource type="Texture2D" uid="uid://u6bu7vmw41d8" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0016.png" id="17_73xoi"]
+[ext_resource type="Texture2D" uid="uid://wj1p4h5qosnv" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0017.png" id="18_3kywn"]
+[ext_resource type="Texture2D" uid="uid://2jafstvwcg2d" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0018.png" id="19_8lf21"]
+[ext_resource type="Texture2D" uid="uid://cj71e7ipdc12l" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0019.png" id="20_2eaug"]
+[ext_resource type="Texture2D" uid="uid://bovg5gh6t6lt1" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0020.png" id="21_r4xfa"]
+[ext_resource type="Texture2D" uid="uid://c1nihslvb746b" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0021.png" id="22_petgi"]
+[ext_resource type="Texture2D" uid="uid://de2e1d638bwfq" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0022.png" id="23_7hjvf"]
+[ext_resource type="Texture2D" uid="uid://bqs8cj7sfg2s4" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0023.png" id="24_14k7k"]
+[ext_resource type="Texture2D" uid="uid://gpa71t1n31tb" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0024.png" id="25_fh7vb"]
+[ext_resource type="Texture2D" uid="uid://5rtmxcb3lgi0" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0025.png" id="26_rsixa"]
+[ext_resource type="Texture2D" uid="uid://d6c1fyv5uav1" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0026.png" id="27_eegyb"]
+[ext_resource type="Texture2D" uid="uid://4861dkfkuc34" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0027.png" id="28_w10ww"]
+[ext_resource type="Texture2D" uid="uid://n1b482ef3f5" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0028.png" id="29_wjfe2"]
+[ext_resource type="Texture2D" uid="uid://bf2c2mmbdpoj7" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0029.png" id="30_lmub0"]
+[ext_resource type="Texture2D" uid="uid://cwwgfdfke1kg3" path="res://Assets/Textures/Calabouço/SaidaAbrindo/frame0030.png" id="31_ujhgh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4de3y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kycsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_t3ijq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fmgao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3yx7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_38ayo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jof67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_g4a6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_f644e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hw8wt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jxsl0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1j3mi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_c3iyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_27xdi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_sj2hu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_qa65j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_u64it")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_73xoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_3kywn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_8lf21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_2eaug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_r4xfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_petgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_7hjvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_14k7k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_fh7vb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_rsixa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_eegyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_w10ww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_wjfe2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_lmub0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ujhgh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4de3y")
+autoplay = "default"
+frame_progress = 0.17653973

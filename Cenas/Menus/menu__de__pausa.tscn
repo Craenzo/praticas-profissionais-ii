@@ -1,0 +1,151 @@
+[gd_scene load_steps=10 format=3 uid="uid://12ym3je1dem3"]
+
+[ext_resource type="Script" uid="uid://cnyups38xxw6n" path="res://Script/menu__de__pausa.gd" id="1_fu35u"]
+[ext_resource type="Shader" uid="uid://cxldy4gqjmaeh" path="res://Assets/Shaders/blur_shader.gdshader" id="1_hykpp"]
+[ext_resource type="Texture2D" uid="uid://c6u6kw5i151ch" path="res://Assets/Textures/Menus/imagem_2025-10-07_143741352-removebg-preview.png" id="1_s6tj1"]
+[ext_resource type="FontFile" uid="uid://cbiuxpvn1wrbb" path="res://Assets/Fontes/SGT-Jhon-O.ttf" id="2_hykpp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fu35u"]
+shader = ExtResource("1_hykpp")
+shader_parameter/lod = 0.0
+
+[sub_resource type="Animation" id="Animation_7c5we"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_cnu2s"]
+resource_name = "continue_animation_2"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_5mphh"]
+resource_name = "puasa_animation"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dvvd6"]
+_data = {
+&"RESET": SubResource("Animation_7c5we"),
+&"continue_animation_2": SubResource("Animation_cnu2s"),
+&"puasa_animation": SubResource("Animation_5mphh")
+}
+
+[node name="Menu _de _pausa" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_fu35u")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_fu35u")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 4.0
+offset_right = 9.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="menu_holder" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.5
+offset_top = -136.0
+offset_right = 248.5
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="continue_btn" type="TextureButton" parent="ColorRect/menu_holder"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_s6tj1")
+
+[node name="Label" type="Label" parent="ColorRect/menu_holder/continue_btn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -133.0
+offset_top = -57.0
+offset_right = 135.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_hykpp")
+theme_override_font_sizes/font_size = 30
+text = "CONTINUE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="quit_btn" type="TextureButton" parent="ColorRect/menu_holder"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("1_s6tj1")
+
+[node name="Label" type="Label" parent="ColorRect/menu_holder/quit_btn"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -144.0
+offset_top = -59.0
+offset_right = 149.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_hykpp")
+theme_override_font_sizes/font_size = 25
+text = "SAIR para menu principal"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="animator" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_dvvd6")
+}
+autoplay = "puasa_animation"
+
+[connection signal="pressed" from="ColorRect/menu_holder/continue_btn" to="." method="_on_continue_btn_pressed"]
+[connection signal="pressed" from="ColorRect/menu_holder/quit_btn" to="." method="_on_quit_btn_pressed"]

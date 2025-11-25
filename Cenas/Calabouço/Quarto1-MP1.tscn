@@ -1,0 +1,178 @@
+[gd_scene load_steps=17 format=3 uid="uid://dg73tjrsxqcpu"]
+
+[ext_resource type="Texture2D" uid="uid://cl4du2vuadflw" path="res://Assets/Textures/Calabouço/Sala0CORRIGIDA.png" id="1_ua0ou"]
+[ext_resource type="PackedScene" uid="uid://bkiubqfnfk62c" path="res://Cenas/player.tscn" id="3_12d0r"]
+[ext_resource type="PackedScene" uid="uid://dxpt5cfefm1bx" path="res://Cenas/Calabouço/caixao_2.tscn" id="4_12d0r"]
+[ext_resource type="Texture2D" uid="uid://ii5majmocsr5" path="res://Assets/Textures/Calabouço/elementos/poço- Copia - Copia.png" id="4_gpxch"]
+[ext_resource type="PackedScene" uid="uid://curh2axewxya3" path="res://Cenas/Calabouço/caixao_3.tscn" id="5_1j1r5"]
+[ext_resource type="PackedScene" uid="uid://u1jtdo67tb5s" path="res://Cenas/Calabouço/tocha.tscn" id="7_hspaa"]
+[ext_resource type="PackedScene" uid="uid://dffrlf3vniymf" path="res://Cenas/Calabouço/caixao_67.tscn" id="8_0o253"]
+[ext_resource type="PackedScene" uid="uid://c8fylcij1f5dd" path="res://Cenas/Calabouço/realidade_quebrando.tscn" id="10_ei5kr"]
+[ext_resource type="PackedScene" uid="uid://cj11pljrwadm8" path="res://Cenas/Calabouço/caixao_chave_vermelha.tscn" id="10_idl8l"]
+[ext_resource type="PackedScene" uid="uid://vtujqg5vafyv" path="res://Cenas/Calabouço/caixao.tscn" id="16_ch68b"]
+
+[sub_resource type="Animation" id="Animation_12d0r"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1j1r5"]
+_data = {
+&"new_animation": SubResource("Animation_12d0r")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wwd8"]
+size = Vector2(1593.5, 118.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kkfej"]
+size = Vector2(78.375, 977.875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_thuic"]
+size = Vector2(230, 252)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ei5kr"]
+size = Vector2(97, 74)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(10000, 10000)
+offset_left = -2927.0
+offset_top = -6478.0
+offset_right = 7073.0
+offset_bottom = 3522.0
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1011.0
+offset_top = -205.0
+offset_right = 589.0
+offset_bottom = 934.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_ua0ou")
+
+[node name="PoçoCopiaCopia" type="Sprite2D" parent="."]
+position = Vector2(133.00002, 666)
+scale = Vector2(1.5823864, 1.6163793)
+texture = ExtResource("4_gpxch")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1j1r5")
+}
+
+[node name="Caixao1" parent="." instance=ExtResource("16_ch68b")]
+position = Vector2(262, 235)
+
+[node name="Caixao2" parent="." instance=ExtResource("4_12d0r")]
+position = Vector2(452, 544)
+
+[node name="Caixao3" parent="." instance=ExtResource("5_1j1r5")]
+position = Vector2(214, 361)
+
+[node name="Tocha" parent="." instance=ExtResource("7_hspaa")]
+position = Vector2(-58, 70)
+
+[node name="Tocha" parent="Tocha" instance=ExtResource("7_hspaa")]
+position = Vector2(-300, 1)
+
+[node name="Tocha" parent="Tocha/Tocha" instance=ExtResource("7_hspaa")]
+position = Vector2(600, -2)
+
+[node name="Tocha" parent="Tocha/Tocha/Tocha" instance=ExtResource("7_hspaa")]
+position = Vector2(150, 1)
+
+[node name="Tocha" parent="Tocha/Tocha/Tocha/Tocha" instance=ExtResource("7_hspaa")]
+position = Vector2(-1051, 0)
+
+[node name="Caixao4" parent="." instance=ExtResource("5_1j1r5")]
+position = Vector2(417, 447)
+
+[node name="Caixao5" parent="." instance=ExtResource("4_12d0r")]
+position = Vector2(646, 524)
+
+[node name="Caixao6" parent="." instance=ExtResource("16_ch68b")]
+position = Vector2(412, 232)
+
+[node name="Caixao67" parent="." instance=ExtResource("8_0o253")]
+position = Vector2(352, 357)
+
+[node name="RealidadeQuebrando" parent="." instance=ExtResource("10_ei5kr")]
+visible = false
+position = Vector2(-124, 53)
+
+[node name="Caixao7" parent="." instance=ExtResource("4_12d0r")]
+position = Vector2(-615, 1138)
+
+[node name="Caixao8" parent="." instance=ExtResource("16_ch68b")]
+position = Vector2(-432, 1555)
+
+[node name="Caixao9" parent="." instance=ExtResource("16_ch68b")]
+position = Vector2(-789, 222)
+
+[node name="Caixao10" parent="." instance=ExtResource("5_1j1r5")]
+position = Vector2(557, 946)
+
+[node name="Caixao11" parent="." instance=ExtResource("5_1j1r5")]
+position = Vector2(-828, 899)
+
+[node name="Caixao12" parent="." instance=ExtResource("4_12d0r")]
+position = Vector2(-695, 626)
+
+[node name="Caixao13" parent="." instance=ExtResource("16_ch68b")]
+position = Vector2(513, 952)
+
+[node name="Caixao14" parent="." instance=ExtResource("4_12d0r")]
+position = Vector2(-494, 745)
+
+[node name="Caixao15" parent="." instance=ExtResource("4_12d0r")]
+position = Vector2(178, 1177)
+
+[node name="Caixao16" parent="." instance=ExtResource("5_1j1r5")]
+position = Vector2(187, 751)
+
+[node name="Caixao17" parent="." instance=ExtResource("16_ch68b")]
+position = Vector2(-573, 766)
+
+[node name="CaixaoChaveVermelha" parent="." instance=ExtResource("10_idl8l")]
+position = Vector2(-679, 179)
+
+[node name="Limite do mapa" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limite do mapa"]
+position = Vector2(630, 965)
+shape = SubResource("RectangleShape2D_0wwd8")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Limite do mapa"]
+position = Vector2(-1109, 965)
+shape = SubResource("RectangleShape2D_0wwd8")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Limite do mapa"]
+position = Vector2(-1010, 453)
+shape = SubResource("RectangleShape2D_kkfej")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Limite do mapa"]
+position = Vector2(-232, 27)
+shape = SubResource("RectangleShape2D_0wwd8")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Limite do mapa"]
+position = Vector2(556, 448)
+shape = SubResource("RectangleShape2D_kkfej")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Limite do mapa"]
+position = Vector2(-230, 1062)
+shape = SubResource("RectangleShape2D_thuic")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Limite do mapa"]
+position = Vector2(131.5, 677)
+shape = SubResource("RectangleShape2D_ei5kr")
+
+[node name="Player" parent="." instance=ExtResource("3_12d0r")]
+visible = false
+position = Vector2(-247, 852)

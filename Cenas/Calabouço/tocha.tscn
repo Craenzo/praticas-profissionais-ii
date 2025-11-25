@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://u1jtdo67tb5s"]
+
+[ext_resource type="Texture2D" uid="uid://b63beheejk60b" path="res://Assets/Textures/Calabouço/Tocha/frame0000.png" id="1_os5vb"]
+[ext_resource type="Texture2D" uid="uid://crumjixffxtfu" path="res://Assets/Textures/Calabouço/Tocha/frame0001.png" id="2_skc77"]
+[ext_resource type="Texture2D" uid="uid://c0t3phw176ym0" path="res://Assets/Textures/Calabouço/Tocha/frame0002.png" id="3_48qr4"]
+[ext_resource type="Texture2D" uid="uid://c77nmm08sq8vd" path="res://Assets/Textures/Calabouço/Tocha/frame0003.png" id="4_d8j0l"]
+[ext_resource type="Texture2D" uid="uid://28fsbru4bprq" path="res://Assets/Textures/Calabouço/Tocha/frame0004.png" id="5_65dko"]
+[ext_resource type="Texture2D" uid="uid://cuttwr81rmfg3" path="res://Assets/Textures/Calabouço/Tocha/frame0005.png" id="6_vta3d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mx6gu"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_os5vb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_skc77")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_48qr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d8j0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_65dko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vta3d")
+}],
+"loop": true,
+"name": &"tocha",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_n7ghd"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_os5vb"]
+gradient = SubResource("Gradient_n7ghd")
+width = 1024
+height = 1024
+fill = 1
+fill_from = Vector2(0.491453, 0.491453)
+metadata/_snap_enabled = true
+metadata/_snap_count = 16
+
+[node name="Tocha" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mx6gu")
+animation = &"tocha"
+autoplay = "tocha"
+frame_progress = 0.59050757
+
+[node name="PointLight2D" type="PointLight2D" parent="AnimatedSprite2D"]
+modulate = Color(1, 1, 0.14509805, 1)
+self_modulate = Color(1, 1, 0.05490196, 1)
+position = Vector2(-26, 10)
+color = Color(1, 0.67058825, 0.16078432, 1)
+texture = SubResource("GradientTexture2D_os5vb")
+texture_scale = 0.05
