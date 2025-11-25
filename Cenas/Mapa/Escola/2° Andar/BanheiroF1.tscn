@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://dmfuvjr4l4cob"]
+[gd_scene load_steps=18 format=4 uid="uid://dmfuvjr4l4cob"]
 
 [ext_resource type="Texture2D" uid="uid://6e3dacpbg74g" path="res://Assets/TileSets/EscolaTileSet/A5.png" id="1_sg7fn"]
 [ext_resource type="Texture2D" uid="uid://bqd8uyf740no8" path="res://Assets/TileSets/EscolaTileSet/A4.png" id="2_p6c4b"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://docii5lbwcux8" path="res://Assets/TileSets/EscolaTileSet/Inside_E.png" id="5_g3cxi"]
 [ext_resource type="Texture2D" uid="uid://cawvpr4qrjesi" path="res://Assets/TileSets/EscolaTileSet/Outside.png" id="6_scfsp"]
 [ext_resource type="PackedScene" uid="uid://bkiubqfnfk62c" path="res://Cenas/Ferramentas/player.tscn" id="7_p6c4b"]
+[ext_resource type="Texture2D" uid="uid://bfo11f8yao4ho" path="res://Assets/TileSets/EscolaTileSet/PNGS/blood1.png" id="8_bfvsa"]
+[ext_resource type="Texture2D" uid="uid://drbp0ka6ifbfu" path="res://Assets/TileSets/EscolaTileSet/PNGS/blood2.png" id="9_vbomj"]
+[ext_resource type="Texture2D" uid="uid://dvp277uulg3qw" path="res://Assets/TileSets/EscolaTileSet/PNGS/codeblood.png" id="10_p4doy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sqh2b"]
 texture = ExtResource("1_sg7fn")
@@ -5076,10 +5079,10 @@ custom_minimum_size = Vector2(10000, 100000)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -5000.0
-offset_top = -50000.0
-offset_right = 5000.0
-offset_bottom = 50000.0
+offset_left = -4810.0
+offset_top = -50283.0
+offset_right = 5190.0
+offset_bottom = 49717.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
@@ -5090,6 +5093,13 @@ tile_set = SubResource("TileSet_t7tsp")
 
 [node name="ChãoL2" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_t7tsp")
+
+[node name="Blood1" type="Sprite2D" parent="."]
+position = Vector2(359.00003, 95)
+rotation = -1.5847514
+scale = Vector2(0.13329689, 0.39207688)
+texture = ExtResource("8_bfvsa")
+metadata/_edit_group_ = true
 
 [node name="ParedeL1" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAAAPr/AwAfABgAAAAAAPv/AwAfABkAAAAAAPz/AwAfABoAAAAAAP3/AwAfABsAAAAAAP7/AwAfABwAAAAAAP//AwAfAB0AAAABAPr/AwAgABgAAAABAPv/AwAgABkAAAABAPz/AwAgABoAAAABAP3/AwAgABsAAAABAP7/AwAgABwAAAABAP//AwAgAB0AAAACAPr/AwAhABgAAAACAPv/AwAhABkAAAACAPz/AwAhABoAAAACAP3/AwAhABsAAAACAP7/AwAhABwAAAACAP//AwAhAB0AAAADAPr/AwAiABgAAAADAPv/AwAiABkAAAADAPz/AwAiABoAAAADAP3/AwAiABsAAAADAP7/AwAiABwAAAADAP//AwAiAB0AAAAEAPr/AwAiABgAAAAEAPv/AwAiABkAAAAEAPz/AwAiABoAAAAEAP3/AwAiABsAAAAEAP7/AwAiABwAAAAEAP//AwAiAB0AAAAFAPr/AwAfABgAAAAFAPv/AwAfABkAAAAFAPz/AwAfABoAAAAFAP3/AwAfABsAAAAFAP7/AwAfABwAAAAFAP//AwAfAB0AAAAGAPr/AwAgABgAAAAGAPv/AwAgABkAAAAGAPz/AwAgABoAAAAGAP3/AwAgABsAAAAGAP7/AwAgABwAAAAGAP//AwAgAB0AAAAHAPr/AwAhABgAAAAHAPv/AwAhABkAAAAHAPz/AwAhABoAAAAHAP3/AwAhABsAAAAHAP7/AwAhABwAAAAHAP//AwAhAB0AAAAIAPr/AwAiABgAAAAIAPv/AwAiABkAAAAIAPz/AwAiABoAAAAIAP3/AwAiABsAAAAIAP7/AwAiABwAAAAIAP//AwAiAB0AAAAJAPr/AwAfABgAAAAJAPv/AwAfABkAAAAJAPz/AwAfABoAAAAJAP3/AwAfABsAAAAJAP7/AwAfABwAAAAJAP//AwAfAB0AAAAKAPr/AwAgABgAAAAKAPv/AwAgABkAAAAKAPz/AwAgABoAAAAKAP3/AwAgABsAAAAKAP7/AwAgABwAAAAKAP//AwAgAB0AAAALAPr/AwAhABgAAAALAPv/AwAhABkAAAALAPz/AwAhABoAAAALAP3/AwAhABsAAAALAP7/AwAhABwAAAALAP//AwAhAB0AAAAMAPr/AwAiABgAAAAMAPv/AwAiABkAAAAMAPz/AwAiABoAAAAMAP3/AwAiABsAAAAMAP7/AwAiABwAAAAMAP//AwAiAB0AAAANAPr/AwAfABgAAAANAPv/AwAfABkAAAANAPz/AwAfABoAAAANAP3/AwAfABsAAAANAP7/AwAfABwAAAANAP//AwAfAB0AAAAOAPr/AwAgABgAAAAOAPv/AwAgABkAAAAOAPz/AwAgABoAAAAOAP3/AwAgABsAAAAOAP7/AwAgABwAAAAOAP//AwAgAB0AAAAPAPr/AwAhABgAAAAPAPv/AwAhABkAAAAPAPz/AwAhABoAAAAPAP3/AwAhABsAAAAPAP7/AwAhABwAAAAPAP//AwAhAB0AAAAQAPr/AwAiABgAAAAQAPv/AwAiABkAAAAQAPz/AwAiABoAAAAQAP3/AwAiABsAAAAQAP7/AwAiABwAAAAQAP//AwAiAB0AAAARAPr/AwAfABgAAAARAPv/AwAfABkAAAARAPz/AwAfABoAAAARAP3/AwAfABsAAAARAP7/AwAfABwAAAARAP//AwAfAB0AAAASAPr/AwAgABgAAAASAPv/AwAgABkAAAASAPz/AwAgABoAAAASAP3/AwAgABsAAAASAP7/AwAgABwAAAASAP//AwAgAB0AAAATAPr/AwAhABgAAAATAPv/AwAhABkAAAATAPz/AwAhABoAAAATAP3/AwAhABsAAAATAP7/AwAhABwAAAATAP//AwAhAB0AAAAUAPr/AwAiABgAAAAUAPv/AwAiABkAAAAUAPz/AwAiABoAAAAUAP3/AwAiABsAAAAUAP7/AwAiABwAAAAUAP//AwAiAB0AAAAVAPr/AwAfABgAAAAVAPv/AwAfABkAAAAVAPz/AwAfABoAAAAVAP3/AwAfABsAAAAVAP7/AwAfABwAAAAVAP//AwAfAB0AAAAWAPr/AwAgABgAAAAWAPv/AwAgABkAAAAWAPz/AwAgABoAAAAWAP3/AwAgABsAAAAWAP7/AwAgABwAAAAWAP//AwAgAB0AAAAXAPr/AwAhABgAAAAXAPv/AwAhABkAAAAXAPz/AwAhABoAAAAXAP3/AwAhABsAAAAXAP7/AwAhABwAAAAXAP//AwAhAB0AAAAYAPr/AwAiABgAAAAYAPv/AwAiABkAAAAYAPz/AwAiABoAAAAYAP3/AwAiABsAAAAYAP7/AwAiABwAAAAYAP//AwAiAB0AAAAZAPr/AwAfABgAAAAZAPv/AwAfABkAAAAZAPz/AwAfABoAAAAZAP3/AwAfABsAAAAZAP7/AwAfABwAAAAZAP//AwAfAB0AAAAaAPr/AwAgABgAAAAaAPv/AwAgABkAAAAaAPz/AwAgABoAAAAaAP3/AwAgABsAAAAaAP7/AwAgABwAAAAaAP//AwAgAB0AAAAbAPr/AwAhABgAAAAbAPv/AwAhABkAAAAbAPz/AwAhABoAAAAbAP3/AwAhABsAAAAbAP7/AwAhABwAAAAbAP//AwAhAB0AAAAcAPr/AwAiABgAAAAcAPv/AwAiABkAAAAcAPz/AwAiABoAAAAcAP3/AwAiABsAAAAcAP7/AwAiABwAAAAcAP//AwAiAB0AAAAdAPr/AwAfABgAAAAdAPv/AwAfABkAAAAdAPz/AwAfABoAAAAdAP3/AwAfABsAAAAdAP7/AwAfABwAAAAdAP//AwAfAB0AAAAeAPr/AwAgABgAAAAeAPv/AwAgABkAAAAeAPz/AwAgABoAAAAeAP3/AwAgABsAAAAeAP7/AwAgABwAAAAeAP//AwAgAB0AAAAfAPr/AwAhABgAAAAfAPv/AwAhABkAAAAfAPz/AwAhABoAAAAfAP3/AwAhABsAAAAfAP7/AwAhABwAAAAfAP//AwAhAB0AAAAgAPr/AwAiABgAAAAgAPv/AwAiABkAAAAgAPz/AwAiABoAAAAgAP3/AwAiABsAAAAgAP7/AwAiABwAAAAgAP//AwAiAB0AAAA=")
@@ -5114,3 +5124,36 @@ tile_set = SubResource("TileSet_t7tsp")
 [node name="Cena" parent="." instance=ExtResource("7_p6c4b")]
 visible = false
 position = Vector2(126, 487)
+
+[node name="GeminiGeneratedImageEtw8Qvetw8Qvetw8RemovebgPreview" type="Sprite2D" parent="."]
+position = Vector2(58.375004, 329.625)
+scale = Vector2(0.13049999, 0.16649997)
+texture = ExtResource("8_bfvsa")
+
+[node name="Blood2" type="Sprite2D" parent="."]
+position = Vector2(114.00001, 165)
+rotation = 1.666434
+scale = Vector2(0.19901125, 0.27197933)
+texture = ExtResource("9_vbomj")
+
+[node name="Blood3" type="Sprite2D" parent="."]
+position = Vector2(150.99998, 304)
+scale = Vector2(0.25149998, 0.14750001)
+texture = ExtResource("9_vbomj")
+
+[node name="Blood4" type="Sprite2D" parent="."]
+position = Vector2(159, 449)
+rotation = -0.62976515
+scale = Vector2(0.21999998, 0.14399998)
+texture = ExtResource("8_bfvsa")
+
+[node name="Blood5" type="Sprite2D" parent="."]
+position = Vector2(175, 19)
+rotation = -0.014335342
+scale = Vector2(0.2739999, 0.05122073)
+texture = ExtResource("8_bfvsa")
+
+[node name="Codeblood" type="Sprite2D" parent="."]
+position = Vector2(117, -48)
+scale = Vector2(0.34075004, 0.17525)
+texture = ExtResource("10_p4doy")

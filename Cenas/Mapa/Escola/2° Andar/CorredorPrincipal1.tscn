@@ -1,15 +1,15 @@
 [gd_scene load_steps=15 format=4 uid="uid://djayyomdkmt6x"]
 
-[ext_resource type="Texture2D" uid="uid://6e3dacpbg74g" path="res://Assets/TileSets/EscolaTileSet/A5.png" id="1_1vdaj"]
-[ext_resource type="Texture2D" uid="uid://bqd8uyf740no8" path="res://Assets/TileSets/EscolaTileSet/A4.png" id="2_qo6g8"]
-[ext_resource type="Texture2D" uid="uid://ca7ob7wixw1t1" path="res://Assets/TileSets/EscolaTileSet/Inside_C.png" id="3_fqv4f"]
-[ext_resource type="Texture2D" uid="uid://djv7q7ccudsn3" path="res://Assets/TileSets/EscolaTileSet/Inside_D.png" id="4_bnbp0"]
-[ext_resource type="Texture2D" uid="uid://docii5lbwcux8" path="res://Assets/TileSets/EscolaTileSet/Inside_E.png" id="5_fmvkk"]
-[ext_resource type="Texture2D" uid="uid://cawvpr4qrjesi" path="res://Assets/TileSets/EscolaTileSet/Outside.png" id="6_ovuj4"]
-[ext_resource type="PackedScene" uid="uid://bkiubqfnfk62c" path="res://Cenas/Ferramentas/player.tscn" id="7_ihuxw"]
+[ext_resource type="Texture2D" uid="uid://6e3dacpbg74g" path="res://Assets/TileSets/EscolaTileSet/A5.png" id="1_6xf0i"]
+[ext_resource type="Texture2D" uid="uid://bqd8uyf740no8" path="res://Assets/TileSets/EscolaTileSet/A4.png" id="2_e3lmp"]
+[ext_resource type="Texture2D" uid="uid://ca7ob7wixw1t1" path="res://Assets/TileSets/EscolaTileSet/Inside_C.png" id="3_ccs1f"]
+[ext_resource type="Texture2D" uid="uid://djv7q7ccudsn3" path="res://Assets/TileSets/EscolaTileSet/Inside_D.png" id="4_s77y5"]
+[ext_resource type="Texture2D" uid="uid://docii5lbwcux8" path="res://Assets/TileSets/EscolaTileSet/Inside_E.png" id="5_0kg1m"]
+[ext_resource type="Texture2D" uid="uid://cawvpr4qrjesi" path="res://Assets/TileSets/EscolaTileSet/Outside.png" id="6_pqp8c"]
+[ext_resource type="PackedScene" uid="uid://bkiubqfnfk62c" path="res://Cenas/Ferramentas/player.tscn" id="7_cl3w1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sqh2b"]
-texture = ExtResource("1_1vdaj")
+texture = ExtResource("1_6xf0i")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -340,7 +340,7 @@ texture = ExtResource("1_1vdaj")
 5:47/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7cihy"]
-texture = ExtResource("2_qo6g8")
+texture = ExtResource("2_e3lmp")
 0:14/0 = 0
 0:15/0 = 0
 0:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -1102,7 +1102,7 @@ texture = ExtResource("2_qo6g8")
 23:35/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s0t8l"]
-texture = ExtResource("3_fqv4f")
+texture = ExtResource("3_ccs1f")
 35:0/0 = 0
 36:0/0 = 0
 39:0/0 = 0
@@ -2757,7 +2757,7 @@ texture = ExtResource("3_fqv4f")
 29:47/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7soft"]
-texture = ExtResource("4_bnbp0")
+texture = ExtResource("4_s77y5")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -3953,7 +3953,7 @@ texture = ExtResource("4_bnbp0")
 43:47/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bwe41"]
-texture = ExtResource("5_fmvkk")
+texture = ExtResource("5_0kg1m")
 0:1/0 = 0
 1:1/0 = 0
 2:1/0 = 0
@@ -4576,7 +4576,7 @@ texture = ExtResource("5_fmvkk")
 46:44/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_obns3"]
-texture = ExtResource("6_ovuj4")
+texture = ExtResource("6_pqp8c")
 2:0/0 = 0
 3:0/0 = 0
 4:0/0 = 0
@@ -5113,5 +5113,6 @@ tile_set = SubResource("TileSet_t7tsp")
 tile_map_data = PackedByteArray("AAAnAPn/AwAUABMAAAAoAPn/AwAUABMAAAAlAPn/AwAUABMAAAAmAPn/AwAUABMAAAAjAPn/AwAUABMAAAAkAPn/AwAUABMAAAAhAPn/AwAUABMAAAAiAPn/AwAUABMAAAAfAPn/AwAUABMAAAAgAPn/AwAUABMAAAAdAPn/AwAUABMAAAAeAPn/AwAUABMAAAAbAPn/AwAUABMAAAAcAPn/AwAUABMAAAAZAPn/AwAUABMAAAAaAPn/AwAUABMAAAAXAPn/AwAUABMAAAAYAPn/AwAUABMAAAAVAPn/AwAUABMAAAAWAPn/AwAUABMAAAATAPn/AwAUABMAAAAUAPn/AwAUABMAAAARAPn/AwAUABMAAAASAPn/AwAUABMAAAAPAPn/AwAUABMAAAAQAPn/AwAUABMAAAANAPn/AwAUABMAAAAOAPn/AwAUABMAAAALAPn/AwAUABMAAAAMAPn/AwAUABMAAAAJAPn/AwAUABMAAAAKAPn/AwAUABMAAAAHAPn/AwAUABMAAAAIAPn/AwAUABMAAAAFAPn/AwAUABMAAAAGAPn/AwAUABMAAAADAPn/AwAUABMAAAAEAPn/AwAUABMAAAABAPn/AwAUABMAAAACAPn/AwAUABMAAAD///n/AwATABMAAAAAAPn/AwAUABMAAAD//wwAAwATABYAAAAAAAwAAwAUABYAAAABAAwAAwAVABYAAAACAAwAAwAVABYAAAADAAwAAwAUABYAAAAEAAwAAwAVABYAAAAFAAwAAwAUABYAAAAGAAwAAwAVABYAAAAHAAwAAwAUABYAAAAIAAwAAwAVABYAAAAJAAwAAwAUABYAAAAKAAwAAwAVABYAAAALAAwAAwAUABYAAAAMAAwAAwAVABYAAAANAAwAAwAUABYAAAAOAAwAAwAVABYAAAAPAAwAAwAUABYAAAAQAAwAAwAVABYAAAARAAwAAwAUABYAAAASAAwAAwAVABYAAAATAAwAAwAUABYAAAAUAAwAAwAVABYAAAAVAAwAAwAUABYAAAAWAAwAAwAVABYAAAAXAAwAAwAUABYAAAAYAAwAAwAVABYAAAAZAAwAAwAUABYAAAAaAAwAAwAVABYAAAAbAAwAAwAUABYAAAAcAAwAAwAVABYAAAAdAAwAAwAUABYAAAAeAAwAAwAVABYAAAAfAAwAAwAUABYAAAAgAAwAAwAVABYAAAAhAAwAAwAUABYAAAAiAAwAAwAVABYAAAAjAAwAAwAUABYAAAAkAAwAAwAVABYAAAAlAAwAAwAUABYAAAAmAAwAAwAVABYAAAAnAAwAAwAUABYAAAAoAAwAAwAVABYAAAD+//j/AwASABIAAAD+//n/AwASABMAAAD///j/AwATABIAAAD+//r/AwASABQAAAD///r/AwATABQAAAD+//v/AwASABQAAAD///v/AwATABQAAAD+//z/AwASABQAAAD///z/AwATABQAAAD+//3/AwASABQAAAD///3/AwATABQAAAD+//7/AwASABQAAAD///7/AwATABQAAAD+////AwASABQAAAD/////AwATABQAAAD+/wAAAwASABQAAAD//wAAAwATABQAAAD+/wEAAwASABQAAAD//wEAAwATABQAAAD+/wIAAwASABQAAAD//wIAAwATABQAAAD+/wMAAwASABQAAAD//wMAAwATABQAAAD+/wQAAwASABQAAAD//wQAAwATABQAAAD+/wUAAwASABQAAAD//wUAAwATABQAAAD+/wYAAwASABQAAAD//wYAAwATABQAAAD+/wcAAwASABQAAAD//wcAAwATABQAAAD+/wgAAwASABQAAAD//wgAAwATABQAAAD+/wkAAwASABQAAAD//wkAAwATABQAAAD+/woAAwASABQAAAD//woAAwATABQAAAD+/wsAAwASABUAAAD//wsAAwATABUAAAD+/wwAAwASABYAAAAAAPj/AwAUABIAAAABAPj/AwAUABIAAAACAPj/AwAUABIAAAADAPj/AwAUABIAAAAEAPj/AwAUABIAAAAFAPj/AwAUABIAAAAGAPj/AwAUABIAAAAHAPj/AwAUABIAAAAIAPj/AwAUABIAAAAJAPj/AwAUABIAAAAKAPj/AwAUABIAAAALAPj/AwAUABIAAAAMAPj/AwAUABIAAAANAPj/AwAUABIAAAAOAPj/AwAUABIAAAAPAPj/AwAUABIAAAAQAPj/AwAUABIAAAARAPj/AwAUABIAAAASAPj/AwAUABIAAAATAPj/AwAUABIAAAAUAPj/AwAUABIAAAAVAPj/AwAUABIAAAAWAPj/AwAUABIAAAAXAPj/AwAUABIAAAAYAPj/AwAUABIAAAAZAPj/AwAUABIAAAAaAPj/AwAUABIAAAAbAPj/AwAUABIAAAAcAPj/AwAUABIAAAAdAPj/AwAUABIAAAAeAPj/AwAUABIAAAAfAPj/AwAUABIAAAAgAPj/AwAUABIAAAAhAPj/AwAUABIAAAAiAPj/AwAUABIAAAAjAPj/AwAUABIAAAAkAPj/AwAUABIAAAAlAPj/AwAUABIAAAAmAPj/AwAUABIAAAAnAPj/AwAUABIAAAAoAPj/AwAUABIAAAA=")
 tile_set = SubResource("TileSet_t7tsp")
 
-[node name="Cena" parent="." instance=ExtResource("7_ihuxw")]
+[node name="Cena" parent="." instance=ExtResource("7_cl3w1")]
+visible = false
 position = Vector2(65, -14)
