@@ -197,7 +197,8 @@ z_index = 1
 script = ExtResource("2_4j5ex")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-zoom = Vector2(2.5, 2.5)
+offset = Vector2(-80, 0)
+zoom = Vector2(3.5, 3.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(0, 1)

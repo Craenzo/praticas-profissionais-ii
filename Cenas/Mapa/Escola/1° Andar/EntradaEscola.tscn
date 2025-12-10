@@ -5119,5 +5119,4 @@ scale = Vector2(0.089999944, 0.07599989)
 texture = ExtResource("7_mpm47")
 
 [node name="Cena" parent="." instance=ExtResource("8_p0thv")]
-visible = false
 position = Vector2(604, 155)

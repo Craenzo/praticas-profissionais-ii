@@ -5123,5 +5123,4 @@ tile_map_data = PackedByteArray("AAABABgAAwAUABUAAAABABkAAwAUABYAAAACABgAAwAUABU
 tile_set = SubResource("TileSet_t7tsp")
 
 [node name="Cena" parent="." instance=ExtResource("7_te4x4")]
-visible = false
 position = Vector2(241, 344)
