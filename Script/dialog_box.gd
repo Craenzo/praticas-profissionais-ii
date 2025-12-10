@@ -3,9 +3,9 @@ extends NinePatchRect
 @onready var text := $Text
 @onready var timer := $Timer
 var msg_queue: Array = [
-	"Corinthians maior do brasil",
-	"Quero ver peitar",
-	"Messao melhor que o cr7"
+	"...",
+	"Onde estou?",
+	"O que é esse lugar?"
 ]
 
 func _input(event):

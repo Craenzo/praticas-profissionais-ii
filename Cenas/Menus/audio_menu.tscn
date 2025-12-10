@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bls4i8yqf4y7f"]
+[gd_scene load_steps=4 format=3 uid="uid://bls4i8yqf4y7f"]
 
 [ext_resource type="Texture2D" uid="uid://coaijrql3ar5s" path="res://Assets/Textures/Menus/fundo_config.png" id="1_jjnyu"]
 [ext_resource type="FontFile" uid="uid://k1ld8akyniv7" path="res://Assets/Fontes/MotionControl-Bold.otf" id="2_nogqd"]
+[ext_resource type="Script" uid="uid://jf0t5cvhs6bg" path="res://Cenas/Menus/back.gd" id="3_08up7"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -47,3 +48,11 @@ vertical_alignment = 1
 
 [node name="HSlider" type="HSlider" parent="VBoxContainer"]
 layout_mode = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 125.0
+offset_bottom = 59.0
+text = "Voltar
+"
+script = ExtResource("3_08up7")

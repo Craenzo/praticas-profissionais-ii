@@ -49,3 +49,6 @@ shape = SubResource("RectangleShape2D_go257")
 
 [node name="Player" parent="." instance=ExtResource("2_4533h")]
 position = Vector2(68, 352)
+
+[node name="CanvasModulate2" type="CanvasModulate" parent="Player" groups=["player"]]
+color = Color(0, 0, 0, 1)

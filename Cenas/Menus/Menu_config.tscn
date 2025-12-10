@@ -12,7 +12,8 @@ var scenes: Dictionary = {
 	\"video\": \"\",
 	\"audio\": \"res://Cenas/Menus/audio_menu.tscn\",
 	\"controles\": \"\",
-	\"creditos\": \"\"
+	\"creditos\": \"\",
+	\"Voltar\": \"res://Cenas/Menus/menu_princiapal.tscn\"
 }
 
 func _ready() -> void:
@@ -196,3 +197,9 @@ theme_override_font_sizes/font_size = 40
 text = "CREDITOS"
 flat = true
 icon_alignment = 1
+
+[node name="Voltar" type="Button" parent="." groups=["botoes_config"]]
+layout_mode = 0
+offset_right = 118.0
+offset_bottom = 64.0
+text = "Voltar"

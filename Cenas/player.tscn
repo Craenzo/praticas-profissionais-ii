@@ -27,7 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://psfq4cwvtqlg" path="res://Assets/MainAnimation/RightAnimation/Catarina_Direita5.png" id="22_ka0he"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
-size = Vector2(34, 23)
+size = Vector2(34, 25)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dw050"]
 animations = [{
@@ -187,16 +187,17 @@ metadata/_snap_count = 16
 radius = 28.0
 height = 76.0
 
-[node name="Player" type="Node2D"]
+[node name="Player" type="Node2D" groups=["player"]]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
 script = ExtResource("2_4j5ex")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(2.5, 2.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0, 18.5)
+visible = false
+position = Vector2(0, 17.5)
 shape = SubResource("RectangleShape2D_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
@@ -204,15 +205,12 @@ sprite_frames = SubResource("SpriteFrames_dw050")
 animation = &"right"
 
 [node name="PointLight2D" type="PointLight2D" parent="CharacterBody2D"]
-position = Vector2(-1, -0.99999905)
+position = Vector2(-17, 3.9999995)
 scale = Vector2(2, 1.379)
 range_z_min = -100
 range_z_max = 100
 texture = SubResource("GradientTexture2D_nvl01")
 texture_scale = 0.4
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0, 0, 0, 1)
 
 [node name="Interação da player" type="Area2D" parent="."]
 
